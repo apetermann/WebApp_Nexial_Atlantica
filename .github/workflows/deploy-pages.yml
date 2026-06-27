@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - claude/iron-ore-companies-extract-r2ji4p
+      - main
   workflow_dispatch:
 
 # Permissões necessárias para publicar no GitHub Pages.
