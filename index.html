@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASX no Brasil — Mapa de Mineração</title>
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <header class="sidebar-header">
+        <h1>ASX <span>no Brasil</span></h1>
+        <p class="subtitle">Empresas listadas na ASX com projetos de mineração no Brasil</p>
+      </header>
+
+      <div class="controls">
+        <input type="search" id="search" placeholder="Buscar empresa, projeto ou ticker…" autocomplete="off" />
+        <div class="filter-row">
+          <select id="commodityFilter" aria-label="Filtrar por commodity">
+            <option value="">Todas as commodities</option>
+          </select>
+          <select id="stateFilter" aria-label="Filtrar por estado">
+            <option value="">Todos os estados</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="stats" id="stats"></div>
+
+      <ul id="companyList" class="company-list"></ul>
+
+      <footer class="sidebar-footer">
+        <p id="metaSource"></p>
+        <p class="disclaimer" id="metaDisclaimer"></p>
+      </footer>
+    </aside>
+
+    <main id="mapWrap">
+      <div id="map"></div>
+      <div id="legend" class="legend"></div>
+    </main>
+  </div>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

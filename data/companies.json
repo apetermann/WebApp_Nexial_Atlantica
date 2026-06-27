@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "title": "ASX no Brasil",
+    "description": "Empresas listadas na ASX (Australian Securities Exchange) com projetos de mineração no Brasil.",
+    "source": "Compilado de fontes públicas (Stockhead, MINING.COM, Yahoo Finance, sites das empresas) em 2026-06. Coordenadas são aproximadas (nível de município/projeto).",
+    "disclaimer": "Dados curados para fins ilustrativos. Não é aconselhamento de investimento. Verifique os anúncios oficiais na ASX antes de qualquer decisão.",
+    "updated": "2026-06-27"
+  },
+  "companies": [
+    {
+      "ticker": "MEI",
+      "name": "Meteoric Resources",
+      "exchange": "ASX",
+      "website": "https://meteoric.com.au",
+      "primaryCommodity": "Terras Raras",
+      "projects": [
+        {
+          "name": "Caldeira",
+          "commodity": "Terras Raras",
+          "type": "Argila iônica (IAC)",
+          "state": "MG",
+          "municipality": "Poços de Caldas",
+          "status": "Desenvolvimento",
+          "lat": -21.85,
+          "lng": -46.45,
+          "note": "Recurso de ~1,5 Bt; licença ambiental preliminar obtida."
+        }
+      ]
+    },
+    {
+      "ticker": "VMM",
+      "name": "Viridis Mining and Minerals",
+      "exchange": "ASX",
+      "website": "https://viridis.net.au",
+      "primaryCommodity": "Terras Raras",
+      "projects": [
+        {
+          "name": "Colossus",
+          "commodity": "Terras Raras",
+          "type": "Argila iônica (IAC)",
+          "state": "MG",
+          "municipality": "Poços de Caldas",
+          "status": "Desenvolvimento",
+          "lat": -21.75,
+          "lng": -46.5,
+          "note": "Aprovação ambiental avançada (LP) no complexo de Poços de Caldas."
+        }
+      ]
+    },
+    {
+      "ticker": "CTM",
+      "name": "Centaurus Metals",
+      "exchange": "ASX",
+      "website": "https://centaurus.com.au",
+      "primaryCommodity": "Níquel",
+      "projects": [
+        {
+          "name": "Jaguar",
+          "commodity": "Níquel",
+          "type": "Sulfeto de níquel",
+          "state": "PA",
+          "municipality": "Carajás",
+          "status": "Desenvolvimento",
+          "lat": -6.45,
+          "lng": -50.3,
+          "note": "Projeto-bandeira na Província Mineral de Carajás."
+        },
+        {
+          "name": "Jambreiro",
+          "commodity": "Minério de Ferro",
+          "type": "Itabirito",
+          "state": "MG",
+          "municipality": "Guanhães",
+          "status": "Exploração",
+          "lat": -18.79,
+          "lng": -42.93,
+          "note": "Projeto de minério de ferro para mercado doméstico."
+        }
+      ]
+    },
+    {
+      "ticker": "SGQ",
+      "name": "St George Mining",
+      "exchange": "ASX",
+      "website": "https://stgm.com.au",
+      "primaryCommodity": "Terras Raras",
+      "projects": [
+        {
+          "name": "Araxá",
+          "commodity": "Terras Raras / Nióbio",
+          "type": "Carbonatito",
+          "state": "MG",
+          "municipality": "Araxá",
+          "status": "Desenvolvimento",
+          "lat": -19.593,
+          "lng": -46.94,
+          "note": "Recurso 70,9 Mt @ 4,06% TREO e 0,62% Nb2O5; vizinho à CBMM."
+        }
+      ]
+    },
+    {
+      "ticker": "EQN",
+      "name": "Equinox Resources",
+      "exchange": "ASX",
+      "website": "https://equinoxresources.com.au",
+      "primaryCommodity": "Terras Raras",
+      "projects": [
+        {
+          "name": "Campo Grande / Canastra / Mata da Corda",
+          "commodity": "Terras Raras",
+          "type": "Argila iônica / carbonatito",
+          "state": "MG",
+          "municipality": "Região da Serra da Canastra",
+          "status": "Exploração",
+          "lat": -19.4,
+          "lng": -46.3,
+          "note": "Conjunto de tenementos de terras raras em Minas Gerais."
+        }
+      ]
+    },
+    {
+      "ticker": "RAU",
+      "name": "Resouro Strategic Metals",
+      "exchange": "ASX",
+      "website": "https://resouro.com.au",
+      "primaryCommodity": "Terras Raras / Titânio",
+      "projects": [
+        {
+          "name": "Tiros",
+          "commodity": "Terras Raras / Titânio",
+          "type": "Laterita",
+          "state": "MG",
+          "municipality": "Tiros",
+          "status": "Exploração",
+          "lat": -19.0,
+          "lng": -45.97,
+          "note": "Recurso inicial de 1,7 Bt @ 3.900 ppm TREO."
+        }
+      ]
+    },
+    {
+      "ticker": "BRE",
+      "name": "Brazilian Rare Earths",
+      "exchange": "ASX",
+      "website": "https://brazilianrareearths.com",
+      "primaryCommodity": "Terras Raras",
+      "projects": [
+        {
+          "name": "Rocha da Rocha",
+          "commodity": "Terras Raras",
+          "type": "Monazita (hard rock) / aluvião",
+          "state": "BA",
+          "municipality": "Região de Caetité",
+          "status": "Exploração",
+          "lat": -14.07,
+          "lng": -42.48,
+          "note": "Sistema de terras raras de alto teor no sul/oeste da Bahia."
+        }
+      ]
+    },
+    {
+      "ticker": "BCM",
+      "name": "Brazilian Critical Minerals",
+      "exchange": "ASX",
+      "website": "https://braziliancriticalminerals.com.au",
+      "primaryCommodity": "Terras Raras",
+      "projects": [
+        {
+          "name": "Ema",
+          "commodity": "Terras Raras",
+          "type": "Argila iônica (IAC)",
+          "state": "AM",
+          "municipality": "Interior do Amazonas",
+          "status": "Exploração",
+          "lat": -4.9,
+          "lng": -62.9,
+          "note": "Recurso inferido de 1,02 Bt @ 793 ppm TREO (localização aproximada)."
+        }
+      ]
+    },
+    {
+      "ticker": "ENV",
+      "name": "Enova Mining",
+      "exchange": "ASX",
+      "website": "https://enovamining.com",
+      "primaryCommodity": "Terras Raras / Titânio / Lítio",
+      "projects": [
+        {
+          "name": "Poços de Caldas (CODA / East Salinas)",
+          "commodity": "Terras Raras / Nióbio / Escândio",
+          "type": "Complexo alcalino",
+          "state": "MG",
+          "municipality": "Patos de Minas / Poços de Caldas",
+          "status": "Exploração",
+          "lat": -18.58,
+          "lng": -46.52,
+          "note": "Tenementos no complexo alcalino de Poços de Caldas e CODA."
+        },
+        {
+          "name": "Juquiá",
+          "commodity": "Terras Raras / Fosfato",
+          "type": "Carbonatito alcalino",
+          "state": "SP",
+          "municipality": "Juquiá",
+          "status": "Exploração",
+          "lat": -24.32,
+          "lng": -47.63,
+          "note": "Complexo alcalino-carbonatítico de Juquiá."
+        }
+      ]
+    },
+    {
+      "ticker": "SLM",
+      "name": "Solis Minerals",
+      "exchange": "ASX",
+      "website": "https://solisminerals.com",
+      "primaryCommodity": "Lítio",
+      "projects": [
+        {
+          "name": "Mandacaru / Jiboia",
+          "commodity": "Lítio",
+          "type": "Pegmatito (hard rock)",
+          "state": "MG",
+          "municipality": "Vale do Lítio (Araçuaí–Salinas)",
+          "status": "Exploração",
+          "lat": -16.85,
+          "lng": -42.07,
+          "note": "Licenças de exploração no Vale do Lítio; campanha de sondagem planejada."
+        }
+      ]
+    },
+    {
+      "ticker": "LRS",
+      "name": "Latin Resources",
+      "exchange": "ASX",
+      "website": "https://latinresources.com.au",
+      "primaryCommodity": "Lítio",
+      "projects": [
+        {
+          "name": "Salinas (Colina)",
+          "commodity": "Lítio",
+          "type": "Pegmatito (hard rock)",
+          "state": "MG",
+          "municipality": "Salinas",
+          "status": "Adquirida",
+          "lat": -16.17,
+          "lng": -42.29,
+          "note": "Recurso 45,2 Mt @ 1,32% Li2O. Adquirida pela PLS (Pilbara Minerals) em 2025."
+        }
+      ]
+    },
+    {
+      "ticker": "AGR",
+      "name": "Aguia Resources",
+      "exchange": "ASX",
+      "website": "https://aguiaresources.com.au",
+      "primaryCommodity": "Fosfato / Cobre",
+      "projects": [
+        {
+          "name": "Três Estradas / Andrade",
+          "commodity": "Fosfato / Cobre",
+          "type": "Carbonatito / sulfeto",
+          "state": "RS",
+          "municipality": "Lavras do Sul",
+          "status": "Desenvolvimento",
+          "lat": -30.81,
+          "lng": -53.9,
+          "note": "Projeto de fosfato Três Estradas e cobre Andrade no Rio Grande do Sul."
+        }
+      ]
+    }
+  ]
+}
