@@ -1,13 +1,23 @@
 /* ASX no Brasil — mapa interativo de empresas ASX com projetos no Brasil.
    Dados: data/companies.json. Mapa: Leaflet + OpenStreetMap. */
 
+// A ordem importa: colorFor() pega a PRIMEIRA chave contida na string da commodity.
 const COMMODITY_COLORS = {
   "Terras Raras": "#e0b341",
+  "Platina": "#cbd5e1",
   "Lítio": "#4ade80",
   "Níquel": "#22d3ee",
-  "Minério de Ferro": "#f97316",
-  "Fosfato / Cobre": "#c084fc",
+  "Zinco": "#60a5fa",
   "Cobre": "#c084fc",
+  "Ouro": "#facc15",
+  "Vanádio": "#f472b6",
+  "Grafita": "#64748b",
+  "Diamantes": "#f0abfc",
+  "Nióbio": "#fca5a5",
+  "Urânio": "#2dd4bf",
+  "Minério de Ferro": "#f97316",
+  "Fosfato": "#a3e635",
+  "Potássio": "#fb923c",
   "Titânio": "#94a3b8",
   "default": "#9ca3af",
 };
@@ -29,7 +39,9 @@ function colorFor(commodity) {
 
 const STATE_NAMES = {
   MG: "Minas Gerais", BA: "Bahia", PA: "Pará", SP: "São Paulo",
-  RS: "Rio Grande do Sul", AM: "Amazonas",
+  RS: "Rio Grande do Sul", AM: "Amazonas", GO: "Goiás", MT: "Mato Grosso",
+  TO: "Tocantins", AP: "Amapá", CE: "Ceará", MA: "Maranhão", PR: "Paraná",
+  RN: "Rio Grande do Norte", PB: "Paraíba", RO: "Rondônia", RR: "Roraima",
 };
 
 let DATA = null;
@@ -54,6 +66,7 @@ async function init() {
   render();
 
   document.getElementById("search").addEventListener("input", render);
+  document.getElementById("exchangeFilter").addEventListener("change", render);
   document.getElementById("commodityFilter").addEventListener("change", render);
   document.getElementById("stateFilter").addEventListener("change", render);
 }
@@ -96,7 +109,7 @@ function popupHtml(company, p) {
     : "";
   return `
     <div class="popup-title">${p.name}</div>
-    <div class="popup-sub">${company.name} · <b>ASX:${company.ticker}</b></div>
+    <div class="popup-sub">${company.name} · <b>${company.exchange}:${company.ticker}</b></div>
     <div class="popup-row"><b>Commodity:</b> ${p.commodity}</div>
     <div class="popup-row"><b>Tipo:</b> ${p.type || "—"}</div>
     <div class="popup-row"><b>Local:</b> ${p.municipality || "—"} — ${STATE_NAMES[p.state] || p.state}</div>
@@ -129,10 +142,19 @@ function buildLegend() {
 function populateFilters() {
   const commodities = new Set();
   const states = new Set();
-  DATA.companies.forEach(c => c.projects.forEach(p => {
-    p.commodity.split("/").forEach(part => commodities.add(part.trim()));
-    states.add(p.state);
-  }));
+  const exchanges = new Set();
+  DATA.companies.forEach(c => {
+    exchanges.add(c.exchange);
+    c.projects.forEach(p => {
+      p.commodity.split("/").forEach(part => commodities.add(part.trim()));
+      states.add(p.state);
+    });
+  });
+
+  const ef = document.getElementById("exchangeFilter");
+  [...exchanges].sort().forEach(e => {
+    ef.insertAdjacentHTML("beforeend", `<option value="${e}">${e}</option>`);
+  });
 
   const cf = document.getElementById("commodityFilter");
   [...commodities].sort().forEach(c => {
@@ -145,10 +167,11 @@ function populateFilters() {
   });
 }
 
-function matches(company, q, commodity, state) {
-  const hay = (company.name + " " + company.ticker + " " +
+function matches(company, q, exchange, commodity, state) {
+  const hay = (company.name + " " + company.ticker + " " + company.exchange + " " +
     company.projects.map(p => p.name + " " + p.commodity + " " + (p.municipality || "")).join(" ")).toLowerCase();
   if (q && !hay.includes(q)) return false;
+  if (exchange && company.exchange !== exchange) return false;
   if (commodity && !company.projects.some(p => p.commodity.includes(commodity))) return false;
   if (state && !company.projects.some(p => p.state === state)) return false;
   return true;
@@ -156,10 +179,11 @@ function matches(company, q, commodity, state) {
 
 function render() {
   const q = document.getElementById("search").value.trim().toLowerCase();
+  const exchange = document.getElementById("exchangeFilter").value;
   const commodity = document.getElementById("commodityFilter").value;
   const state = document.getElementById("stateFilter").value;
 
-  const visible = DATA.companies.filter(c => matches(c, q, commodity, state));
+  const visible = DATA.companies.filter(c => matches(c, q, exchange, commodity, state));
   const visibleTickers = new Set(visible.map(c => c.ticker));
 
   // Atualiza marcadores (mostra/esconde).
@@ -192,7 +216,7 @@ function render() {
       <li class="company-card ${c.ticker === activeTicker ? "active" : ""}" data-ticker="${c.ticker}">
         <div class="card-top">
           <span class="card-name">${c.name}</span>
-          <span class="ticker">ASX:${c.ticker}</span>
+          <span class="ticker">${c.exchange}:${c.ticker}</span>
         </div>
         <div class="card-commodity">${c.primaryCommodity}</div>
         <div class="card-projects">${chips}</div>

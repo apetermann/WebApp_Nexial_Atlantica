@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASX no Brasil — Mapa de Mineração</title>
+  <title>ASX &amp; TSX no Brasil — Mapa de Mineração</title>
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -11,12 +11,15 @@
   <div id="app">
     <aside id="sidebar">
       <header class="sidebar-header">
-        <h1>ASX <span>no Brasil</span></h1>
-        <p class="subtitle">Empresas listadas na ASX com projetos de mineração no Brasil</p>
+        <h1>ASX &amp; TSX <span>no Brasil</span></h1>
+        <p class="subtitle">Empresas das bolsas ASX, TSX e TSX.V com projetos de mineração no Brasil</p>
       </header>
 
       <div class="controls">
         <input type="search" id="search" placeholder="Buscar empresa, projeto ou ticker…" autocomplete="off" />
+        <select id="exchangeFilter" aria-label="Filtrar por bolsa">
+          <option value="">Todas as bolsas</option>
+        </select>
         <div class="filter-row">
           <select id="commodityFilter" aria-label="Filtrar por commodity">
             <option value="">Todas as commodities</option>

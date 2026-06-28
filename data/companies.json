@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "ASX no Brasil",
-    "description": "Empresas listadas na ASX (Australian Securities Exchange) com projetos de mineração no Brasil.",
-    "source": "Compilado de fontes públicas (Stockhead, MINING.COM, Yahoo Finance, sites das empresas) em 2026-06. Coordenadas são aproximadas (nível de município/projeto).",
-    "disclaimer": "Dados curados para fins ilustrativos. Não é aconselhamento de investimento. Verifique os anúncios oficiais na ASX antes de qualquer decisão.",
+    "title": "ASX & TSX no Brasil",
+    "description": "Empresas listadas na ASX (Austrália) e na TSX / TSX.V (Toronto) com projetos de mineração no Brasil.",
+    "source": "Compilado de fontes públicas (Stockhead, MINING.COM, Junior Mining Network, Yahoo Finance, sites das empresas e relatórios NI 43-101 / JORC) em 2026-06. Coordenadas são aproximadas (nível de município/projeto).",
+    "disclaimer": "Dados curados para fins ilustrativos. Não é aconselhamento de investimento. Verifique os anúncios oficiais na ASX/TSX antes de qualquer decisão.",
     "updated": "2026-06-27"
   },
   "companies": [
@@ -128,13 +128,13 @@
         {
           "name": "Tiros",
           "commodity": "Terras Raras / Titânio",
-          "type": "Laterita",
+          "type": "Laterita / regolito",
           "state": "MG",
           "municipality": "Tiros",
-          "status": "Exploração",
+          "status": "Desenvolvimento",
           "lat": -19.0,
           "lng": -45.97,
-          "note": "Recurso inicial de 1,7 Bt @ 3.900 ppm TREO."
+          "note": "Projeto de titânio e terras raras de grande porte; PEA positiva. Também listada na TSX.V (RSM)."
         }
       ]
     },
@@ -266,6 +266,1032 @@
           "lat": -30.81,
           "lng": -53.9,
           "note": "Projeto de fosfato Três Estradas e cobre Andrade no Rio Grande do Sul."
+        }
+      ]
+    },
+    {
+      "ticker": "AXL",
+      "name": "Axel REE",
+      "exchange": "ASX",
+      "website": "https://axelree.com.au",
+      "primaryCommodity": "Terras Raras",
+      "projects": [
+        {
+          "name": "Caladão",
+          "commodity": "Terras Raras",
+          "type": "Argila iônica (IAC) + ISR",
+          "state": "MG",
+          "municipality": "Vale do Jequitinhonha",
+          "status": "Exploração",
+          "lat": -16.8,
+          "lng": -42.3,
+          "note": "Recurso JORC inferido de 572 Mt; alvo Woolrich escolhido para piloto de recuperação in-situ (ISR)."
+        },
+        {
+          "name": "Caldas",
+          "commodity": "Terras Raras",
+          "type": "Complexo alcalino",
+          "state": "MG",
+          "municipality": "Poços de Caldas",
+          "status": "Exploração",
+          "lat": -21.79,
+          "lng": -46.56,
+          "note": "Opção em fase inicial no complexo alcalino de Poços de Caldas."
+        }
+      ]
+    },
+    {
+      "ticker": "PEC",
+      "name": "Perpetual Resources",
+      "exchange": "ASX",
+      "website": "https://perpetualresources.com.au",
+      "primaryCommodity": "Terras Raras / Lítio",
+      "projects": [
+        {
+          "name": "Raptor",
+          "commodity": "Terras Raras",
+          "type": "Argila iônica (IAC)",
+          "state": "MG",
+          "municipality": "Poços de Caldas (complexo Caldeira)",
+          "status": "Exploração",
+          "lat": -21.6,
+          "lng": -46.5,
+          "note": "Quatro licenças (3,8 km²) dentro do complexo de argila iônica Caldeira; também direitos de nióbio e escândio."
+        },
+        {
+          "name": "Isabella",
+          "commodity": "Lítio",
+          "type": "Pegmatito",
+          "state": "MG",
+          "municipality": "Vale do Jequitinhonha",
+          "status": "Exploração",
+          "lat": -16.9,
+          "lng": -42.2,
+          "note": "Projeto de lítio no Vale do Lítio de Minas Gerais; ~14.000 ha de permissões de lítio/ETR."
+        }
+      ]
+    },
+    {
+      "ticker": "CR3",
+      "name": "Core Energy Minerals",
+      "exchange": "ASX",
+      "website": "https://coreenergyminerals.com.au",
+      "primaryCommodity": "Terras Raras / Urânio",
+      "projects": [
+        {
+          "name": "Tunas",
+          "commodity": "Terras Raras",
+          "type": "Saprólito / complexo alcalino",
+          "state": "PR",
+          "municipality": "Tunas do Paraná",
+          "status": "Exploração",
+          "lat": -25.0,
+          "lng": -49.1,
+          "note": "Complexo alcalino de Tunas, ~80 km ao norte de Curitiba; TREO de até 2.921 ppm em solos residuais."
+        },
+        {
+          "name": "Campo Largo",
+          "commodity": "Terras Raras",
+          "type": "Argila saprolítica",
+          "state": "PR",
+          "municipality": "Campo Largo",
+          "status": "Exploração",
+          "lat": -25.46,
+          "lng": -49.53,
+          "note": "TREO com alta proporção de óxidos magnéticos (MREO) em perfil de argila saprolítica."
+        },
+        {
+          "name": "Amorinópolis (Urânio)",
+          "commodity": "Urânio",
+          "type": "Sedimentar",
+          "state": "GO",
+          "municipality": "Amorinópolis",
+          "status": "Exploração",
+          "lat": -16.6,
+          "lng": -51.1,
+          "note": "Parte de portfólio de urânio de ~800 km² em PB, PR, GO e RS."
+        }
+      ]
+    },
+    {
+      "ticker": "SUM",
+      "name": "Summit Minerals",
+      "exchange": "ASX",
+      "website": "https://summitminerals.com.au",
+      "primaryCommodity": "Nióbio",
+      "projects": [
+        {
+          "name": "Equador",
+          "commodity": "Nióbio",
+          "type": "Pegmatito (Província da Borborema)",
+          "state": "RN",
+          "municipality": "Equador",
+          "status": "Exploração",
+          "lat": -6.93,
+          "lng": -36.72,
+          "note": "Resultados de altíssima lei: até 64,61% Nb2O5 e 26% Ta2O5; também ETR pesadas."
+        }
+      ]
+    },
+    {
+      "ticker": "PNN",
+      "name": "Power Minerals",
+      "exchange": "ASX",
+      "website": "https://powerminerals.com.au",
+      "primaryCommodity": "Terras Raras / Nióbio",
+      "projects": [
+        {
+          "name": "Santa Anna",
+          "commodity": "Nióbio",
+          "type": "Complexo alcalino / carbonatito",
+          "state": "GO",
+          "municipality": "Região central de Goiás",
+          "status": "Exploração",
+          "lat": -16.0,
+          "lng": -49.8,
+          "note": "Descobertas de nióbio e ETR de alta lei em primeiros furos."
+        },
+        {
+          "name": "Morro do Ferro",
+          "commodity": "Terras Raras",
+          "type": "Complexo alcalino",
+          "state": "MG",
+          "municipality": "Poços de Caldas",
+          "status": "Exploração",
+          "lat": -21.78,
+          "lng": -46.57,
+          "note": "Projeto de terras raras em Minas Gerais."
+        }
+      ]
+    },
+    {
+      "ticker": "ALV",
+      "name": "Alvo Minerals",
+      "exchange": "ASX",
+      "website": "https://alvo.com.au",
+      "primaryCommodity": "Cobre / Terras Raras",
+      "projects": [
+        {
+          "name": "Palma",
+          "commodity": "Cobre",
+          "type": "VMS (sulfeto maciço vulcanogênico)",
+          "state": "TO",
+          "municipality": "Palmeirópolis",
+          "status": "Desenvolvimento",
+          "lat": -13.0,
+          "lng": -48.4,
+          "note": "Recurso JORC de 7,6 Mt @ 2,0% CuEq (Cu-Zn-Pb-Ag) em cinturão VMS de >1.000 km²."
+        },
+        {
+          "name": "Bluebush",
+          "commodity": "Terras Raras",
+          "type": "Argila iônica (IAC)",
+          "state": "TO",
+          "municipality": "Palmeirópolis",
+          "status": "Exploração",
+          "lat": -13.05,
+          "lng": -48.42,
+          "note": "Projeto de 120 km² de argila iônica prospectivo para ETR pesadas."
+        },
+        {
+          "name": "Iporá",
+          "commodity": "Terras Raras",
+          "type": "Argila iônica (IAC)",
+          "state": "GO",
+          "municipality": "Iporá",
+          "status": "Exploração",
+          "lat": -16.44,
+          "lng": -51.12,
+          "note": "Projeto de 211 km² de argila iônica, no mesmo trend do PCH da Appia."
+        }
+      ]
+    },
+    {
+      "ticker": "L1M",
+      "name": "Lightning Minerals",
+      "exchange": "ASX",
+      "website": "https://lightningminerals.com.au",
+      "primaryCommodity": "Lítio",
+      "projects": [
+        {
+          "name": "Caraíbas",
+          "commodity": "Lítio",
+          "type": "Pegmatito",
+          "state": "MG",
+          "municipality": "Salinas (Vale do Lítio)",
+          "status": "Exploração",
+          "lat": -16.17,
+          "lng": -42.29,
+          "note": "Cinco licenças (1.733 ha) na Formação Salinas; pegmatitos com lepidolita até 0,53% Li2O."
+        },
+        {
+          "name": "Sidrônio",
+          "commodity": "Lítio",
+          "type": "Pegmatito",
+          "state": "MG",
+          "municipality": "Salinas (Vale do Lítio)",
+          "status": "Exploração",
+          "lat": -16.22,
+          "lng": -42.31,
+          "note": "Dois tenements (1.638 ha), adjacente e ao sul de Caraíbas."
+        }
+      ]
+    },
+    {
+      "ticker": "AL8",
+      "name": "Alderan Resources",
+      "exchange": "ASX",
+      "website": "https://alderanresources.com.au",
+      "primaryCommodity": "Lítio",
+      "projects": [
+        {
+          "name": "Curral de Dentro / Minas Novas",
+          "commodity": "Lítio",
+          "type": "Pegmatito",
+          "state": "MG",
+          "municipality": "Vale do Lítio Oriental",
+          "status": "Exploração",
+          "lat": -16.9,
+          "lng": -42.4,
+          "note": "Sete áreas (472 km², 24 licenças) no Cinturão Oriental de Lítio, próximo a Sigma e Latin Resources."
+        }
+      ]
+    },
+    {
+      "ticker": "OCN",
+      "name": "Oceana Lithium",
+      "exchange": "ASX",
+      "website": "https://oceanametals.com",
+      "primaryCommodity": "Lítio",
+      "projects": [
+        {
+          "name": "Solonópole",
+          "commodity": "Lítio",
+          "type": "Pegmatito",
+          "state": "CE",
+          "municipality": "Solonópole",
+          "status": "Exploração",
+          "lat": -5.74,
+          "lng": -39.01,
+          "note": "Dez permissões (~124 km²); corredor pegmatítico de ~20 km com mais de 20 minas históricas."
+        }
+      ]
+    },
+    {
+      "ticker": "AUZ",
+      "name": "Australian Mines",
+      "exchange": "ASX",
+      "website": "https://australianmines.com.au",
+      "primaryCommodity": "Ouro",
+      "projects": [
+        {
+          "name": "Boa Vista",
+          "commodity": "Ouro",
+          "type": "Orogênico (granito/granodiorito)",
+          "state": "PA",
+          "municipality": "Itaituba (Tapajós)",
+          "status": "Exploração",
+          "lat": -6.8,
+          "lng": -56.3,
+          "note": "Earn-in de até 80% (da GoldMining); recurso histórico VG1 de 336.000 oz @ 1,23 g/t Au."
+        }
+      ]
+    },
+    {
+      "ticker": "ERO",
+      "name": "Ero Copper",
+      "exchange": "TSX",
+      "website": "https://erocopper.com",
+      "primaryCommodity": "Cobre",
+      "projects": [
+        {
+          "name": "Caraíba (Vale do Curaçá)",
+          "commodity": "Cobre",
+          "type": "Sulfeto / Subterrânea",
+          "state": "BA",
+          "municipality": "Jaguarari",
+          "status": "Produção",
+          "lat": -10.13,
+          "lng": -39.85,
+          "note": "Complexo de minas de cobre em operação no Vale do Curaçá, Bahia (Pilar, Vermelhos e Surubim). Ouro e prata como subprodutos."
+        },
+        {
+          "name": "Tucumã",
+          "commodity": "Cobre",
+          "type": "Sulfeto / Céu aberto",
+          "state": "PA",
+          "municipality": "Tucumã",
+          "status": "Produção",
+          "lat": -6.74,
+          "lng": -51.16,
+          "note": "Mina de cobre a céu aberto na região de Carajás; produção comercial em julho de 2025."
+        },
+        {
+          "name": "Furnas",
+          "commodity": "Cobre / Ouro",
+          "type": "Sulfeto",
+          "state": "PA",
+          "municipality": "Canaã dos Carajás",
+          "status": "Exploração",
+          "lat": -6.45,
+          "lng": -50.0,
+          "note": "Projeto cobre-ouro em Carajás; earn-in com a Vale Base Metals."
+        },
+        {
+          "name": "Xavantina (NX Gold)",
+          "commodity": "Ouro",
+          "type": "Subterrânea / Veio",
+          "state": "MT",
+          "municipality": "Nova Xavantina",
+          "status": "Produção",
+          "lat": -14.67,
+          "lng": -52.35,
+          "note": "Mina subterrânea de ouro de alto teor no sudeste do Mato Grosso."
+        }
+      ]
+    },
+    {
+      "ticker": "NEXA",
+      "name": "Nexa Resources",
+      "exchange": "TSX",
+      "website": "https://www.nexaresources.com",
+      "primaryCommodity": "Zinco",
+      "projects": [
+        {
+          "name": "Vazante",
+          "commodity": "Zinco",
+          "type": "Sulfeto / Silicato",
+          "state": "MG",
+          "municipality": "Vazante",
+          "status": "Produção",
+          "lat": -17.99,
+          "lng": -46.91,
+          "note": "Mina subterrânea de zinco em operação; alimenta a fundição de Três Marias."
+        },
+        {
+          "name": "Morro Agudo",
+          "commodity": "Zinco",
+          "type": "Sulfeto",
+          "state": "MG",
+          "municipality": "Paracatu",
+          "status": "Desenvolvimento",
+          "lat": -16.7,
+          "lng": -46.55,
+          "note": "Complexo de zinco-chumbo; mineração suspensa em 2023 com avaliação de projetos futuros."
+        },
+        {
+          "name": "Aripuanã",
+          "commodity": "Zinco / Cobre",
+          "type": "Sulfeto",
+          "state": "MT",
+          "municipality": "Aripuanã",
+          "status": "Produção",
+          "lat": -10.17,
+          "lng": -59.45,
+          "note": "Mina polimetálica (zinco-chumbo-cobre) no noroeste do Mato Grosso."
+        }
+      ]
+    },
+    {
+      "ticker": "LUN",
+      "name": "Lundin Mining",
+      "exchange": "TSX",
+      "website": "https://lundinmining.com",
+      "primaryCommodity": "Cobre",
+      "projects": [
+        {
+          "name": "Chapada",
+          "commodity": "Cobre / Ouro",
+          "type": "Sulfeto / Céu aberto",
+          "state": "GO",
+          "municipality": "Alto Horizonte",
+          "status": "Produção",
+          "lat": -14.18,
+          "lng": -49.27,
+          "note": "Mina de cobre-ouro a céu aberto em Goiás; inclui a descoberta Saúva."
+        }
+      ]
+    },
+    {
+      "ticker": "LGO",
+      "name": "Largo Inc",
+      "exchange": "TSX",
+      "website": "https://www.largoinc.com",
+      "primaryCommodity": "Vanádio",
+      "projects": [
+        {
+          "name": "Maracás Menchen",
+          "commodity": "Vanádio / Titânio",
+          "type": "Magnetita / Céu aberto",
+          "state": "BA",
+          "municipality": "Maracás",
+          "status": "Produção",
+          "lat": -13.55,
+          "lng": -40.43,
+          "note": "Uma das maiores minas primárias de vanádio do mundo; produz também ilmenita (titânio)."
+        }
+      ]
+    },
+    {
+      "ticker": "ARA",
+      "name": "Aclara Resources",
+      "exchange": "TSX",
+      "website": "https://www.aclara-re.com",
+      "primaryCommodity": "Terras Raras",
+      "projects": [
+        {
+          "name": "Carina",
+          "commodity": "Terras Raras",
+          "type": "Argila iônica / Céu aberto",
+          "state": "GO",
+          "municipality": "Nova Roma",
+          "status": "Desenvolvimento",
+          "lat": -13.74,
+          "lng": -46.88,
+          "note": "Terras raras pesadas (disprósio, térbio) em argilas iônicas; estudo de viabilidade concluído."
+        }
+      ]
+    },
+    {
+      "ticker": "NPK",
+      "name": "Verde AgriTech",
+      "exchange": "TSX",
+      "website": "https://verde.ag",
+      "primaryCommodity": "Potássio",
+      "projects": [
+        {
+          "name": "Cerrado Verde",
+          "commodity": "Potássio",
+          "type": "Glauconita / Céu aberto",
+          "state": "MG",
+          "municipality": "São Gotardo",
+          "status": "Produção",
+          "lat": -19.31,
+          "lng": -46.05,
+          "note": "Fertilizante de potássio (silicato de potássio / glauconita) no Cerrado Mineiro. Marcas K Forte e BAKS."
+        }
+      ]
+    },
+    {
+      "ticker": "JAG",
+      "name": "Jaguar Mining",
+      "exchange": "TSX",
+      "website": "https://www.jaguarmining.com",
+      "primaryCommodity": "Ouro",
+      "projects": [
+        {
+          "name": "Complexo MTL (Turmalina)",
+          "commodity": "Ouro",
+          "type": "Subterrânea",
+          "state": "MG",
+          "municipality": "Conceição do Pará",
+          "status": "Produção",
+          "lat": -19.74,
+          "lng": -44.88,
+          "note": "Mina subterrânea de ouro com usina, no Quadrilátero Ferrífero."
+        },
+        {
+          "name": "Complexo Caeté (Pilar / Roça Grande)",
+          "commodity": "Ouro",
+          "type": "Subterrânea",
+          "state": "MG",
+          "municipality": "Caeté",
+          "status": "Produção",
+          "lat": -19.9,
+          "lng": -43.62,
+          "note": "Minas subterrâneas de ouro (Pilar em produção; Roça Grande em desenvolvimento)."
+        },
+        {
+          "name": "Complexo Paciência (Santa Isabel)",
+          "commodity": "Ouro",
+          "type": "Subterrânea",
+          "state": "MG",
+          "municipality": "Rio Acima",
+          "status": "Desenvolvimento",
+          "lat": -20.05,
+          "lng": -43.8,
+          "note": "Complexo em cuidados e manutenção, em estudo para retomada."
+        }
+      ]
+    },
+    {
+      "ticker": "BSX",
+      "name": "Belo Sun Mining",
+      "exchange": "TSX",
+      "website": "https://www.belosun.com",
+      "primaryCommodity": "Ouro",
+      "projects": [
+        {
+          "name": "Volta Grande",
+          "commodity": "Ouro",
+          "type": "Céu aberto",
+          "state": "PA",
+          "municipality": "Senador José Porfírio",
+          "status": "Desenvolvimento",
+          "lat": -3.2,
+          "lng": -51.77,
+          "note": "Projeto de ouro a céu aberto na região de Altamira, com ~3,8 Moz em reservas."
+        }
+      ]
+    },
+    {
+      "ticker": "SBI",
+      "name": "Serabi Gold",
+      "exchange": "TSX",
+      "website": "https://www.serabigold.com",
+      "primaryCommodity": "Ouro",
+      "projects": [
+        {
+          "name": "Complexo Palito (Palito / São Chico)",
+          "commodity": "Ouro",
+          "type": "Subterrânea",
+          "state": "PA",
+          "municipality": "Itaituba",
+          "status": "Produção",
+          "lat": -6.3,
+          "lng": -55.78,
+          "note": "Minas subterrâneas de ouro com usina central, no distrito de Jardim do Ouro (Tapajós)."
+        },
+        {
+          "name": "Coringa",
+          "commodity": "Ouro",
+          "type": "Subterrânea",
+          "state": "PA",
+          "municipality": "Novo Progresso",
+          "status": "Desenvolvimento",
+          "lat": -7.95,
+          "lng": -55.3,
+          "note": "Projeto de ouro em fase de ramp-up na região do Tapajós."
+        }
+      ]
+    },
+    {
+      "ticker": "GOLD",
+      "name": "GoldMining Inc",
+      "exchange": "TSX",
+      "website": "https://www.goldmining.com",
+      "primaryCommodity": "Ouro",
+      "projects": [
+        {
+          "name": "São Jorge",
+          "commodity": "Ouro",
+          "type": "Céu aberto",
+          "state": "PA",
+          "municipality": "Itaituba",
+          "status": "Exploração",
+          "lat": -6.45,
+          "lng": -56.2,
+          "note": "Projeto de exploração de ouro no Distrito Aurífero do Tapajós."
+        },
+        {
+          "name": "Cachoeira",
+          "commodity": "Ouro",
+          "type": "Céu aberto",
+          "state": "PA",
+          "municipality": "Cachoeira do Piriá",
+          "status": "Exploração",
+          "lat": -1.75,
+          "lng": -46.55,
+          "note": "Projeto de ouro em fase de recurso, no Cinturão Gurupi."
+        },
+        {
+          "name": "Batistão",
+          "commodity": "Ouro",
+          "type": "Céu aberto",
+          "state": "MT",
+          "municipality": "Peixoto de Azevedo",
+          "status": "Exploração",
+          "lat": -10.3,
+          "lng": -55.05,
+          "note": "Projeto de exploração de ouro no Cinturão Alta Floresta."
+        }
+      ]
+    },
+    {
+      "ticker": "GMIN",
+      "name": "G Mining Ventures",
+      "exchange": "TSX",
+      "website": "https://gmin.gold",
+      "primaryCommodity": "Ouro",
+      "projects": [
+        {
+          "name": "Tocantinzinho",
+          "commodity": "Ouro",
+          "type": "Céu aberto",
+          "state": "PA",
+          "municipality": "Itaituba",
+          "status": "Produção",
+          "lat": -6.32,
+          "lng": -56.4,
+          "note": "Mina de ouro a céu aberto em produção comercial desde 2024, no Tapajós."
+        },
+        {
+          "name": "Gurupi (CentroGold)",
+          "commodity": "Ouro",
+          "type": "Céu aberto",
+          "state": "MA",
+          "municipality": "Centro Novo do Maranhão",
+          "status": "Desenvolvimento",
+          "lat": -2.3,
+          "lng": -46.2,
+          "note": "Projeto de ouro a céu aberto em licenciamento, no Cinturão Gurupi."
+        }
+      ]
+    },
+    {
+      "ticker": "K",
+      "name": "Kinross Gold",
+      "exchange": "TSX",
+      "website": "https://www.kinross.com",
+      "primaryCommodity": "Ouro",
+      "projects": [
+        {
+          "name": "Paracatu (Morro do Ouro)",
+          "commodity": "Ouro",
+          "type": "Céu aberto",
+          "state": "MG",
+          "municipality": "Paracatu",
+          "status": "Produção",
+          "lat": -17.22,
+          "lng": -46.87,
+          "note": "Uma das maiores minas de ouro a céu aberto do mundo, no noroeste de Minas Gerais."
+        }
+      ]
+    },
+    {
+      "ticker": "MNO",
+      "name": "Meridian Mining",
+      "exchange": "TSX",
+      "website": "https://meridianmining.co",
+      "primaryCommodity": "Cobre / Ouro",
+      "projects": [
+        {
+          "name": "Cabaçal",
+          "commodity": "Cobre / Ouro",
+          "type": "VMS / Céu aberto",
+          "state": "MT",
+          "municipality": "Rio Branco",
+          "status": "Desenvolvimento",
+          "lat": -15.27,
+          "lng": -58.13,
+          "note": "Projeto de cobre-ouro-prata (sistema VMS) a céu aberto no oeste do Mato Grosso, com PFS de 2025."
+        }
+      ]
+    },
+    {
+      "ticker": "CBR",
+      "name": "Cabral Gold",
+      "exchange": "TSX.V",
+      "website": "https://cabralgold.com",
+      "primaryCommodity": "Ouro",
+      "projects": [
+        {
+          "name": "Cuiú Cuiú",
+          "commodity": "Ouro",
+          "type": "Orogênico (heap-leach óxido)",
+          "state": "PA",
+          "municipality": "Itaituba",
+          "status": "Desenvolvimento",
+          "lat": -6.35,
+          "lng": -56.45,
+          "note": "Projeto principal no distrito de Cuiú Cuiú (Tapajós), com PFS de 2025 e recurso acima de 1,2 Moz."
+        },
+        {
+          "name": "Bom Jardim",
+          "commodity": "Ouro",
+          "type": "Exploração (antigo garimpo)",
+          "state": "PA",
+          "municipality": "Itaituba",
+          "status": "Exploração",
+          "lat": -6.25,
+          "lng": -56.35,
+          "note": "Alvo exploratório no mesmo trend do Tapajós, ~25 km a noroeste de Cuiú Cuiú."
+        }
+      ]
+    },
+    {
+      "ticker": "ALTA",
+      "name": "Altamira Gold",
+      "exchange": "TSX.V",
+      "website": "https://altamiragold.com",
+      "primaryCommodity": "Ouro",
+      "projects": [
+        {
+          "name": "Cajueiro",
+          "commodity": "Ouro",
+          "type": "Pórfiro aurífero",
+          "state": "MT",
+          "municipality": "Nova Bandeirantes",
+          "status": "Exploração",
+          "lat": -9.85,
+          "lng": -57.8,
+          "note": "Projeto carro-chefe no Cinturão de Alta Floresta; descoberta do primeiro pórfiro de ouro do Brasil."
+        },
+        {
+          "name": "Apiacás",
+          "commodity": "Ouro",
+          "type": "Exploração",
+          "state": "MT",
+          "municipality": "Apiacás",
+          "status": "Exploração",
+          "lat": -9.55,
+          "lng": -57.45,
+          "note": "Antigo campo aluvionar do cinturão, com novos alvos primários sendo testados."
+        }
+      ]
+    },
+    {
+      "ticker": "LGC",
+      "name": "Lavras Gold",
+      "exchange": "TSX.V",
+      "website": "https://lavrasgold.com",
+      "primaryCommodity": "Ouro",
+      "projects": [
+        {
+          "name": "Lavras do Sul (LDS)",
+          "commodity": "Ouro",
+          "type": "Intrusivo alcalino / epitermal-mesotermal",
+          "state": "RS",
+          "municipality": "Lavras do Sul",
+          "status": "Exploração",
+          "lat": -30.85,
+          "lng": -53.95,
+          "note": "Projeto avançado de ~22.000 ha com mais de 23 alvos auríferos, incluindo o depósito Butiá."
+        }
+      ]
+    },
+    {
+      "ticker": "JZR",
+      "name": "JZR Gold",
+      "exchange": "TSX.V",
+      "website": "https://jzrgold.com",
+      "primaryCommodity": "Ouro",
+      "projects": [
+        {
+          "name": "Vila Nova",
+          "commodity": "Ouro",
+          "type": "Orogênico (greenstone belt)",
+          "state": "AP",
+          "municipality": "Mazagão",
+          "status": "Produção",
+          "lat": -0.86,
+          "lng": -51.52,
+          "note": "Greenstone belt de Vila Nova com usina gravimétrica de 800 t/dia; primeiro concentrado no fim de 2025."
+        }
+      ]
+    },
+    {
+      "ticker": "LTH",
+      "name": "Lithium Ionic",
+      "exchange": "TSX.V",
+      "website": "https://www.lithiumionic.com",
+      "primaryCommodity": "Lítio",
+      "projects": [
+        {
+          "name": "Bandeira",
+          "commodity": "Lítio",
+          "type": "Pegmatito de espodumênio (LCT)",
+          "state": "MG",
+          "municipality": "Itinga",
+          "status": "Desenvolvimento",
+          "lat": -16.62,
+          "lng": -41.77,
+          "note": "Projeto carro-chefe no Vale do Lítio (Jequitinhonha), com estudo de viabilidade definitivo (2025)."
+        },
+        {
+          "name": "Outro Lado",
+          "commodity": "Lítio",
+          "type": "Pegmatito de espodumênio (LCT)",
+          "state": "MG",
+          "municipality": "Itinga",
+          "status": "Exploração",
+          "lat": -16.6,
+          "lng": -41.8,
+          "note": "Depósito de alto teor a ~5 km a noroeste do Bandeira."
+        },
+        {
+          "name": "Baixa Grande (Salinas)",
+          "commodity": "Lítio",
+          "type": "Pegmatito de espodumênio (LCT)",
+          "state": "MG",
+          "municipality": "Salinas",
+          "status": "Exploração",
+          "lat": -16.18,
+          "lng": -42.31,
+          "note": "Principal alvo de crescimento do grupo Salinas, com recurso ampliado em 2025."
+        }
+      ]
+    },
+    {
+      "ticker": "IMM",
+      "name": "International Metals Mining",
+      "exchange": "TSX.V",
+      "website": "https://internationalmetalscorp.com",
+      "primaryCommodity": "Lítio",
+      "projects": [
+        {
+          "name": "Lithium Valley (Itinga/Araçuaí)",
+          "commodity": "Lítio",
+          "type": "Pegmatito de espodumênio (LCT)",
+          "state": "MG",
+          "municipality": "Araçuaí",
+          "status": "Exploração",
+          "lat": -16.85,
+          "lng": -41.95,
+          "note": "~21.000 ha sob opção no Vale do Lítio, a leste do Grota do Cirilo da Sigma Lithium."
+        }
+      ]
+    },
+    {
+      "ticker": "LRA",
+      "name": "Lara Exploration",
+      "exchange": "TSX.V",
+      "website": "https://laraexploration.com",
+      "primaryCommodity": "Cobre / Ouro",
+      "projects": [
+        {
+          "name": "Planalto",
+          "commodity": "Cobre / Ouro",
+          "type": "IOCG (Carajás)",
+          "state": "PA",
+          "municipality": "Canaã dos Carajás",
+          "status": "Exploração",
+          "lat": -6.5,
+          "lng": -49.88,
+          "note": "Projeto 100% Lara em Carajás, entre as minas Sossego e Cristalino da Vale."
+        },
+        {
+          "name": "Celesta",
+          "commodity": "Cobre",
+          "type": "Brechas / IOCG",
+          "state": "PA",
+          "municipality": "Curionópolis",
+          "status": "Produção",
+          "lat": -6.1,
+          "lng": -49.59,
+          "note": "Mina de cobre de alto teor em produção via JV; Lara detém participação e royalty NSR."
+        },
+        {
+          "name": "Itaituba (Vanádio)",
+          "commodity": "Vanádio",
+          "type": "Magnetita vanadífera em gabro",
+          "state": "PA",
+          "municipality": "Itaituba",
+          "status": "Exploração",
+          "lat": -4.28,
+          "lng": -55.98,
+          "note": "Projeto de vanádio no Distrito do Tapajós, com geofísica e sondagem realizados."
+        },
+        {
+          "name": "Damolândia",
+          "commodity": "Níquel",
+          "type": "Complexo máfico-ultramáfico",
+          "state": "GO",
+          "municipality": "Damolândia",
+          "status": "Exploração",
+          "lat": -16.25,
+          "lng": -49.36,
+          "note": "Licença em Goiás central com potencial para sulfetos de níquel-cobre-cobalto."
+        }
+      ]
+    },
+    {
+      "ticker": "HHH",
+      "name": "Helius Minerals",
+      "exchange": "TSX.V",
+      "website": "https://heliusminerals.com",
+      "primaryCommodity": "Ouro",
+      "projects": [
+        {
+          "name": "Serra Pelada",
+          "commodity": "Ouro",
+          "type": "Ouro-EGP (hidrotermal)",
+          "state": "PA",
+          "municipality": "Curionópolis",
+          "status": "Adquirida",
+          "lat": -6.04,
+          "lng": -49.67,
+          "note": "Histórico projeto de ouro e platinoides em Curionópolis, em aquisição; em care-and-maintenance desde 2014."
+        }
+      ]
+    },
+    {
+      "ticker": "MAX",
+      "name": "Max Resource",
+      "exchange": "TSX.V",
+      "website": "https://www.maxresource.com",
+      "primaryCommodity": "Minério de Ferro",
+      "projects": [
+        {
+          "name": "Florália",
+          "commodity": "Minério de Ferro",
+          "type": "Hematita DSO",
+          "state": "MG",
+          "municipality": "Santa Bárbara",
+          "status": "Desenvolvimento",
+          "lat": -19.96,
+          "lng": -43.42,
+          "note": "Projeto de minério de ferro DSO no Quadrilátero Ferrífero (subsidiária Max Iron Brazil)."
+        }
+      ]
+    },
+    {
+      "ticker": "BRVO",
+      "name": "Bravo Mining",
+      "exchange": "TSX.V",
+      "website": "https://bravomining.com",
+      "primaryCommodity": "Platina / Paládio / Níquel",
+      "projects": [
+        {
+          "name": "Luanga",
+          "commodity": "Platina / Paládio / Níquel",
+          "type": "EGP magmático + ouro + níquel",
+          "state": "PA",
+          "municipality": "Curionópolis",
+          "status": "Desenvolvimento",
+          "lat": -6.12,
+          "lng": -49.62,
+          "note": "Depósito de platinoides (EGP) + ouro + níquel em Carajás, com PEA em 2025 e PFS prevista para 2026."
+        }
+      ]
+    },
+    {
+      "ticker": "VO",
+      "name": "ValOre Metals",
+      "exchange": "TSX.V",
+      "website": "https://www.valoremetals.com",
+      "primaryCommodity": "Platina / Paládio",
+      "projects": [
+        {
+          "name": "Pedra Branca",
+          "commodity": "Platina / Paládio / Ouro",
+          "type": "EGP magmático (cromititos)",
+          "state": "CE",
+          "municipality": "Pedra Branca",
+          "status": "Exploração",
+          "lat": -5.45,
+          "lng": -39.72,
+          "note": "Maior projeto de platinoides do Brasil, com recurso inferido de ~2,2 Moz de Pt+Pd+Au no Ceará."
+        }
+      ]
+    },
+    {
+      "ticker": "IFOS",
+      "name": "Itafos",
+      "exchange": "TSX.V",
+      "website": "https://itafos.com",
+      "primaryCommodity": "Fosfato",
+      "projects": [
+        {
+          "name": "Arraias",
+          "commodity": "Fosfato",
+          "type": "Mina integrada com fábrica de fertilizantes (SSP)",
+          "state": "TO",
+          "municipality": "Arraias",
+          "status": "Produção",
+          "lat": -12.93,
+          "lng": -46.94,
+          "note": "Operação integrada de fosfato e fertilizantes em Tocantins; único ativo brasileiro após a venda de Araxá em 2025."
+        }
+      ]
+    },
+    {
+      "ticker": "STS",
+      "name": "South Star Battery Metals",
+      "exchange": "TSX.V",
+      "website": "https://southstarbatterymetals.com",
+      "primaryCommodity": "Grafita",
+      "projects": [
+        {
+          "name": "Santa Cruz",
+          "commodity": "Grafita",
+          "type": "Grafita em flocos (céu aberto)",
+          "state": "BA",
+          "municipality": "Maiquinique",
+          "status": "Produção",
+          "lat": -15.6,
+          "lng": -40.25,
+          "note": "Primeira nova mina comercial de grafita em flocos das Américas em décadas, no sul da Bahia."
+        }
+      ]
+    },
+    {
+      "ticker": "TRS",
+      "name": "Tres-Or Resources",
+      "exchange": "TSX.V",
+      "website": "https://tres-or.com",
+      "primaryCommodity": "Diamantes",
+      "projects": [
+        {
+          "name": "Coromandel",
+          "commodity": "Diamantes",
+          "type": "Exploração de kimberlitos",
+          "state": "MG",
+          "municipality": "Coromandel",
+          "status": "Exploração",
+          "lat": -18.47,
+          "lng": -47.2,
+          "note": "Direitos sobre dezenas de kimberlitos diamantíferos no distrito de Coromandel."
         }
       ]
     }
