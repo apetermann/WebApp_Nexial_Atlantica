@@ -37,6 +37,39 @@ function colorFor(commodity) {
   return COMMODITY_COLORS.default;
 }
 
+// Cores das áreas Atlântica por substância (alinhadas às commodities das empresas).
+const SUBSTANCE_COLORS = {
+  "MINÉRIO DE FERRO": "#f97316",
+  "FERRO": "#f97316",
+  "MINÉRIO DE OURO": "#facc15",
+  "MINÉRIO DE MANGANÊS": "#ec4899",
+  "FOSFATO": "#a3e635",
+  "GRAFITA": "#64748b",
+  "TERRAS RARAS": "#e0b341",
+  "MINÉRIO DE LÍTIO": "#4ade80",
+  "MINÉRIO DE TITÂNIO": "#94a3b8",
+  "COBRE": "#c084fc",
+  "MINÉRIO DE BERÍLIO": "#2dd4bf",
+  "AREIA": "#d6b370",
+  "CALCÁRIO": "#e7c9a9",
+  "QUARTZO": "#a5f3fc",
+  "GNAISSE": "#9c7a5b",
+  "GRANITO": "#b08968",
+  "default": "#e11d48",
+};
+
+function substanceColor(sub) {
+  return SUBSTANCE_COLORS[sub] || SUBSTANCE_COLORS.default;
+}
+
+// "MINÉRIO DE FERRO" -> "Minério de Ferro"
+function prettifySub(s) {
+  const small = new Set(["de", "da", "do", "das", "dos", "e"]);
+  return s.toLowerCase().split(" ")
+    .map((w, i) => (i > 0 && small.has(w)) ? w : w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
 const STATE_NAMES = {
   MG: "Minas Gerais", BA: "Bahia", PA: "Pará", SP: "São Paulo",
   RS: "Rio Grande do Sul", AM: "Amazonas", GO: "Goiás", MT: "Mato Grosso",
@@ -48,8 +81,12 @@ let DATA = null;
 let MAP = null;
 const MARKERS = {}; // key: `${ticker}::${projectName}` -> marker
 let activeTicker = null;
-let TENEMENTS_LAYER = null;
-const TENEMENT_COLOR = "#e11d48"; // cor-assinatura das áreas Atlântica Minas
+let COMPANIES_LAYER = null;          // grupo com os marcadores de empresas
+let TENEMENTS_LAYER = null;          // grupo (geoJSON) com os polígonos das áreas
+let TENEMENT_ITEMS = [];             // [{ layer, sub }] para filtrar por substância
+let TENEMENT_TOTAL = 0;
+let LEGEND_COMMODITY_HTML = "";
+let LEGEND_AREA_HTML = "";
 
 async function init() {
   try {
@@ -68,18 +105,23 @@ async function init() {
   render();
   loadTenements();
 
+  // Camada de empresas
   document.getElementById("search").addEventListener("input", render);
   document.getElementById("exchangeFilter").addEventListener("change", render);
   document.getElementById("commodityFilter").addEventListener("change", render);
   document.getElementById("stateFilter").addEventListener("change", render);
-
-  document.getElementById("tenementsToggle").addEventListener("change", e => {
-    if (!TENEMENTS_LAYER) return;
-    if (e.target.checked) TENEMENTS_LAYER.addTo(MAP);
-    else MAP.removeLayer(TENEMENTS_LAYER);
+  document.getElementById("companiesToggle").addEventListener("change", e => {
+    if (e.target.checked) COMPANIES_LAYER.addTo(MAP);
+    else MAP.removeLayer(COMPANIES_LAYER);
   });
+
+  // Camada de áreas Atlântica
+  document.getElementById("tenementsToggle").addEventListener("change", renderTenements);
+  document.getElementById("substanceFilter").addEventListener("change", renderTenements);
   document.getElementById("tenementsFocus").addEventListener("click", () => {
-    if (TENEMENTS_LAYER) MAP.flyToBounds(TENEMENTS_LAYER.getBounds().pad(0.2), { duration: 0.8 });
+    if (TENEMENTS_LAYER && MAP.hasLayer(TENEMENTS_LAYER)) {
+      MAP.flyToBounds(TENEMENTS_LAYER.getBounds().pad(0.2), { duration: 0.8 });
+    }
   });
 }
 
@@ -97,6 +139,9 @@ function setupMap() {
   MAP.createPane("tenements");
   MAP.getPane("tenements").style.zIndex = 350;
 
+  // Grupo (camada) das empresas; a participação dos marcadores é controlada por render().
+  COMPANIES_LAYER = L.layerGroup().addTo(MAP);
+
   // Cria os marcadores uma vez só.
   for (const company of DATA.companies) {
     for (const p of company.projects) {
@@ -110,7 +155,6 @@ function setupMap() {
         fillOpacity: 0.9,
       }).bindPopup(popupHtml(company, p));
       marker._company = company;
-      marker.addTo(MAP);
       MARKERS[`${company.ticker}::${p.name}`] = marker;
     }
   }
@@ -145,21 +189,67 @@ async function loadTenements() {
     return; // sem áreas; o resto do app segue normal
   }
 
-  const count = (data.features || []).length;
-  const el = document.getElementById("tenementsCount");
-  if (el) el.textContent = count;
-
-  const baseStyle = { color: TENEMENT_COLOR, weight: 1, opacity: 0.9, fillColor: TENEMENT_COLOR, fillOpacity: 0.12 };
+  TENEMENT_TOTAL = (data.features || []).length;
+  TENEMENT_ITEMS = [];
 
   TENEMENTS_LAYER = L.geoJSON(data, {
     pane: "tenements",
-    style: () => baseStyle,
+    style: f => {
+      const c = substanceColor(f.properties.substancia);
+      return { color: c, weight: 1, opacity: 0.9, fillColor: c, fillOpacity: 0.22 };
+    },
     onEachFeature: (f, layer) => {
       layer.bindPopup(tenementPopup(f.properties), { maxWidth: 280 });
-      layer.on("mouseover", () => layer.setStyle({ weight: 2.5, fillOpacity: 0.28 }));
+      layer.on("mouseover", () => layer.setStyle({ weight: 2.5, fillOpacity: 0.42 }));
       layer.on("mouseout", () => TENEMENTS_LAYER.resetStyle(layer));
+      TENEMENT_ITEMS.push({ layer, sub: f.properties.substancia || "" });
     },
   }).addTo(MAP);
+
+  populateSubstanceFilter(data);
+  buildAreaLegend(data);
+  renderTenements();
+}
+
+// Mostra/oculta a camada de áreas e aplica o filtro de substância.
+function renderTenements() {
+  if (!TENEMENTS_LAYER) return;
+  const visible = document.getElementById("tenementsToggle").checked;
+  const sub = document.getElementById("substanceFilter").value;
+  const countEl = document.getElementById("tenementsCount");
+
+  if (!visible) {
+    if (MAP.hasLayer(TENEMENTS_LAYER)) MAP.removeLayer(TENEMENTS_LAYER);
+    if (countEl) countEl.textContent = TENEMENT_TOTAL;
+    return;
+  }
+  if (!MAP.hasLayer(TENEMENTS_LAYER)) TENEMENTS_LAYER.addTo(MAP);
+
+  let shown = 0;
+  TENEMENT_ITEMS.forEach(({ layer, sub: s }) => {
+    const ok = !sub || s === sub;
+    if (ok) {
+      if (!TENEMENTS_LAYER.hasLayer(layer)) TENEMENTS_LAYER.addLayer(layer);
+      shown++;
+    } else if (TENEMENTS_LAYER.hasLayer(layer)) {
+      TENEMENTS_LAYER.removeLayer(layer);
+    }
+  });
+  if (countEl) countEl.textContent = sub ? `${shown} / ${TENEMENT_TOTAL}` : TENEMENT_TOTAL;
+}
+
+function populateSubstanceFilter(data) {
+  const counts = {};
+  data.features.forEach(f => {
+    const s = f.properties.substancia;
+    if (s) counts[s] = (counts[s] || 0) + 1;
+  });
+  const subs = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+  const sf = document.getElementById("substanceFilter");
+  subs.forEach(s => {
+    sf.insertAdjacentHTML("beforeend",
+      `<option value="${s}">${prettifySub(s)} (${counts[s]})</option>`);
+  });
 }
 
 function tenementPopup(p) {
@@ -193,14 +283,32 @@ function buildLegend() {
     .map(k => `<div class="legend-item"><span class="dot" style="background:${COMMODITY_COLORS[k]}"></span>${k}</div>`)
     .join("");
 
-  const areasItem =
-    `<div class="legend-item" style="margin-top:8px;border-top:1px solid var(--border);padding-top:8px">
-       <span class="dot" style="background:${TENEMENT_COLOR}"></span>Áreas Atlântica Minas</div>`;
+  LEGEND_COMMODITY_HTML = `<h4>Empresas · commodity</h4>${html}`;
+  renderLegend();
+}
 
-  document.getElementById("legend").innerHTML = `<h4>Commodity</h4>${html}${areasItem}`;
+function buildAreaLegend(data) {
+  const counts = {};
+  data.features.forEach(f => {
+    const s = f.properties.substancia;
+    if (s) counts[s] = (counts[s] || 0) + 1;
+  });
+  const subs = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+  const items = subs.map(s =>
+    `<div class="legend-item"><span class="dot" style="background:${substanceColor(s)}"></span>${prettifySub(s)}<span class="legend-count">${counts[s]}</span></div>`
+  ).join("");
+  LEGEND_AREA_HTML = `<h4 class="legend-h4-2">Áreas · substância</h4>${items}`;
+  renderLegend();
+}
+
+function renderLegend() {
+  document.getElementById("legend").innerHTML = LEGEND_COMMODITY_HTML + LEGEND_AREA_HTML;
 }
 
 function populateFilters() {
+  const cc = document.getElementById("companiesCount");
+  if (cc) cc.textContent = DATA.companies.length;
+
   const commodities = new Set();
   const states = new Set();
   const exchanges = new Set();
@@ -247,14 +355,14 @@ function render() {
   const visible = DATA.companies.filter(c => matches(c, q, exchange, commodity, state));
   const visibleTickers = new Set(visible.map(c => c.ticker));
 
-  // Atualiza marcadores (mostra/esconde).
+  // Atualiza a participação dos marcadores no grupo de empresas (mostra/esconde).
   DATA.companies.forEach(c => {
     c.projects.forEach(p => {
       const m = MARKERS[`${c.ticker}::${p.name}`];
       if (!m) return;
       const show = visibleTickers.has(c.ticker);
-      if (show && !MAP.hasLayer(m)) m.addTo(MAP);
-      if (!show && MAP.hasLayer(m)) MAP.removeLayer(m);
+      if (show && !COMPANIES_LAYER.hasLayer(m)) COMPANIES_LAYER.addLayer(m);
+      if (!show && COMPANIES_LAYER.hasLayer(m)) COMPANIES_LAYER.removeLayer(m);
     });
   });
 
@@ -293,6 +401,13 @@ function focusCompany(ticker) {
   activeTicker = ticker;
   const company = DATA.companies.find(c => c.ticker === ticker);
   if (!company) return;
+
+  // Se a camada de empresas estiver oculta, reativa para mostrar o marcador.
+  const toggle = document.getElementById("companiesToggle");
+  if (toggle && !toggle.checked) {
+    toggle.checked = true;
+    COMPANIES_LAYER.addTo(MAP);
+  }
 
   document.querySelectorAll(".company-card").forEach(el =>
     el.classList.toggle("active", el.dataset.ticker === ticker));
