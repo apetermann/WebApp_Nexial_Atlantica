@@ -48,6 +48,8 @@ let DATA = null;
 let MAP = null;
 const MARKERS = {}; // key: `${ticker}::${projectName}` -> marker
 let activeTicker = null;
+let TENEMENTS_LAYER = null;
+const TENEMENT_COLOR = "#e11d48"; // cor-assinatura das áreas Atlântica Minas
 
 async function init() {
   try {
@@ -64,11 +66,21 @@ async function init() {
   populateFilters();
   renderFooter();
   render();
+  loadTenements();
 
   document.getElementById("search").addEventListener("input", render);
   document.getElementById("exchangeFilter").addEventListener("change", render);
   document.getElementById("commodityFilter").addEventListener("change", render);
   document.getElementById("stateFilter").addEventListener("change", render);
+
+  document.getElementById("tenementsToggle").addEventListener("change", e => {
+    if (!TENEMENTS_LAYER) return;
+    if (e.target.checked) TENEMENTS_LAYER.addTo(MAP);
+    else MAP.removeLayer(TENEMENTS_LAYER);
+  });
+  document.getElementById("tenementsFocus").addEventListener("click", () => {
+    if (TENEMENTS_LAYER) MAP.flyToBounds(TENEMENTS_LAYER.getBounds().pad(0.2), { duration: 0.8 });
+  });
 }
 
 function setupMap() {
@@ -80,6 +92,10 @@ function setupMap() {
     subdomains: "abcd",
     maxZoom: 19,
   }).addTo(MAP);
+
+  // Pane dedicado às áreas (polígonos), abaixo dos marcadores de empresas.
+  MAP.createPane("tenements");
+  MAP.getPane("tenements").style.zIndex = 350;
 
   // Cria os marcadores uma vez só.
   for (const company of DATA.companies) {
@@ -120,6 +136,47 @@ function popupHtml(company, p) {
   `;
 }
 
+async function loadTenements() {
+  let data;
+  try {
+    const res = await fetch("data/tenements.geojson");
+    data = await res.json();
+  } catch (e) {
+    return; // sem áreas; o resto do app segue normal
+  }
+
+  const count = (data.features || []).length;
+  const el = document.getElementById("tenementsCount");
+  if (el) el.textContent = count;
+
+  const baseStyle = { color: TENEMENT_COLOR, weight: 1, opacity: 0.9, fillColor: TENEMENT_COLOR, fillOpacity: 0.12 };
+
+  TENEMENTS_LAYER = L.geoJSON(data, {
+    pane: "tenements",
+    style: () => baseStyle,
+    onEachFeature: (f, layer) => {
+      layer.bindPopup(tenementPopup(f.properties), { maxWidth: 280 });
+      layer.on("mouseover", () => layer.setStyle({ weight: 2.5, fillOpacity: 0.28 }));
+      layer.on("mouseout", () => TENEMENTS_LAYER.resetStyle(layer));
+    },
+  }).addTo(MAP);
+}
+
+function tenementPopup(p) {
+  const row = (label, val) => val ? `<div class="popup-row"><b>${label}:</b> ${val}</div>` : "";
+  const area = p.area_ha ? `${p.area_ha} ha` : "";
+  return `
+    <div class="popup-title">Processo ${p.processo || "—"}</div>
+    <div class="popup-sub">Área de mineração · Atlântica Minas</div>
+    ${row("Substância", p.substancia)}
+    ${row("Uso", p.uso)}
+    ${row("Fase", p.fase)}
+    ${row("Área", area)}
+    ${row("Titular", p.titular)}
+    ${row("UF", STATE_NAMES[p.uf] || p.uf)}
+  `;
+}
+
 function buildLegend() {
   const used = new Set();
   DATA.companies.forEach(c => c.projects.forEach(p => used.add(colorFor(p.commodity))));
@@ -136,7 +193,11 @@ function buildLegend() {
     .map(k => `<div class="legend-item"><span class="dot" style="background:${COMMODITY_COLORS[k]}"></span>${k}</div>`)
     .join("");
 
-  document.getElementById("legend").innerHTML = `<h4>Commodity</h4>${html}`;
+  const areasItem =
+    `<div class="legend-item" style="margin-top:8px;border-top:1px solid var(--border);padding-top:8px">
+       <span class="dot" style="background:${TENEMENT_COLOR}"></span>Áreas Atlântica Minas</div>`;
+
+  document.getElementById("legend").innerHTML = `<h4>Commodity</h4>${html}${areasItem}`;
 }
 
 function populateFilters() {
