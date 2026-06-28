@@ -41,6 +41,21 @@ html, body {
   padding: 20px 20px 14px;
   border-bottom: 1px solid var(--border);
 }
+.brand {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+.brand img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  display: block;
+}
 .sidebar-header h1 {
   margin: 0;
   font-size: 22px;
