@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "ASX & TSX no Brasil",
-    "description": "Empresas listadas na ASX (Austrália) e na TSX / TSX.V (Toronto) com projetos de mineração no Brasil.",
-    "source": "Compilado de fontes públicas (Stockhead, MINING.COM, Junior Mining Network, Yahoo Finance, sites das empresas e relatórios NI 43-101 / JORC) em 2026-06. Coordenadas são aproximadas (nível de município/projeto).",
-    "disclaimer": "Dados curados para fins ilustrativos. Não é aconselhamento de investimento. Verifique os anúncios oficiais na ASX/TSX antes de qualquer decisão.",
-    "updated": "2026-06-27"
+    "title": "Áreas Atlântica Minas e Empresas Listadas",
+    "description": "Empresas de mineração listadas na ASX (Austrália), TSX / TSX.V (Toronto) e Nasdaq (EUA) com projetos no Brasil, mais as áreas de processos minerários da Atlântica Minas.",
+    "source": "Compilado de fontes públicas (Stockhead, MINING.COM, Junior Mining Network, sites das empresas e relatórios NI 43-101 / JORC) em 2026-06. Coordenadas aproximadas (nível de município/projeto). Cotações: Yahoo Finance.",
+    "disclaimer": "Dados curados para fins ilustrativos. Não é aconselhamento de investimento. Cotações podem estar defasadas. Verifique os anúncios oficiais na bolsa antes de qualquer decisão.",
+    "updated": "2026-06-28"
   },
   "companies": [
     {
@@ -1292,6 +1292,185 @@
           "lat": -18.47,
           "lng": -47.2,
           "note": "Direitos sobre dezenas de kimberlitos diamantíferos no distrito de Coromandel."
+        }
+      ]
+    },
+    {
+      "ticker": "SGML",
+      "name": "Sigma Lithium",
+      "exchange": "NASDAQ",
+      "website": "https://www.sigmalithiumresources.com",
+      "primaryCommodity": "Lítio",
+      "projects": [
+        {
+          "name": "Grota do Cirilo",
+          "commodity": "Lítio",
+          "type": "Pegmatito de espodumênio",
+          "state": "MG",
+          "municipality": "Itinga",
+          "status": "Produção",
+          "lat": -16.62,
+          "lng": -41.77,
+          "note": "Maior complexo produtor de lítio do Brasil no Vale do Jequitinhonha; Fase 1 em produção comercial desde 2023, com expansão em curso."
+        }
+      ]
+    },
+    {
+      "ticker": "ATLX",
+      "name": "Atlas Lithium",
+      "exchange": "NASDAQ",
+      "website": "https://www.atlas-lithium.com",
+      "primaryCommodity": "Lítio",
+      "projects": [
+        {
+          "name": "Projeto Neves",
+          "commodity": "Lítio",
+          "type": "Pegmatito de espodumênio",
+          "state": "MG",
+          "municipality": "Araçuaí",
+          "status": "Desenvolvimento",
+          "lat": -16.85,
+          "lng": -42.05,
+          "note": "Projeto 100% próprio no Distrito de Araçuaí; concessão de lavra obtida em 2025, planta DMS em montagem."
+        },
+        {
+          "name": "Projeto Salinas",
+          "commodity": "Lítio",
+          "type": "Pegmatito de espodumênio",
+          "state": "MG",
+          "municipality": "Salinas",
+          "status": "Exploração",
+          "lat": -16.2,
+          "lng": -42.33,
+          "note": "Pegmatitos ricos em espodumênio ~95 km ao norte de Neves."
+        }
+      ]
+    },
+    {
+      "ticker": "ATCX",
+      "name": "Atlas Critical Minerals",
+      "exchange": "NASDAQ",
+      "website": "https://www.atlascriticalminerals.com",
+      "primaryCommodity": "Terras Raras / Grafita",
+      "projects": [
+        {
+          "name": "Alto do Paranaíba",
+          "commodity": "Terras Raras / Titânio",
+          "type": "Depósito de terras raras e titânio",
+          "state": "MG",
+          "municipality": "Patos de Minas",
+          "status": "Exploração",
+          "lat": -18.56,
+          "lng": -46.5,
+          "note": "Projeto principal; 27.737 ha em 21 direitos minerários, com alto teor de TR e titânio."
+        },
+        {
+          "name": "Iporá",
+          "commodity": "Terras Raras",
+          "type": "Depósito de terras raras",
+          "state": "GO",
+          "municipality": "Iporá",
+          "status": "Exploração",
+          "lat": -16.46,
+          "lng": -51.14,
+          "note": "18.615 ha em 12 direitos minerários."
+        },
+        {
+          "name": "Malacacheta",
+          "commodity": "Grafita",
+          "type": "Depósito de grafita",
+          "state": "MG",
+          "municipality": "Malacacheta",
+          "status": "Exploração",
+          "lat": -17.71,
+          "lng": -42.08,
+          "note": "Grafita de altíssima pureza (grau nuclear) em testes de laboratório."
+        },
+        {
+          "name": "Rio Piracicaba",
+          "commodity": "Minério de Ferro",
+          "type": "Minério de ferro (Quadrilátero Ferrífero)",
+          "state": "MG",
+          "municipality": "Rio Piracicaba",
+          "status": "Produção",
+          "lat": -19.92,
+          "lng": -43.18,
+          "note": "Operação geradora de receita iniciada em novembro de 2025."
+        }
+      ]
+    },
+    {
+      "ticker": "AUGO",
+      "name": "Aura Minerals",
+      "exchange": "NASDAQ",
+      "website": "https://www.auraminerals.com",
+      "primaryCommodity": "Ouro / Cobre",
+      "projects": [
+        {
+          "name": "Almas",
+          "commodity": "Ouro",
+          "type": "Mina de ouro a céu aberto",
+          "state": "TO",
+          "municipality": "Almas",
+          "status": "Produção",
+          "lat": -11.58,
+          "lng": -47.17,
+          "note": "Mina de ouro a céu aberto (depósitos Paiol, Vira Saia e Cata Funda)."
+        },
+        {
+          "name": "Apoena (EPP)",
+          "commodity": "Ouro",
+          "type": "Complexo de minas a céu aberto",
+          "state": "MT",
+          "municipality": "Pontes e Lacerda",
+          "status": "Produção",
+          "lat": -15.23,
+          "lng": -59.34,
+          "note": "Complexo Ernesto/Pau-a-Pique no oeste do Mato Grosso."
+        },
+        {
+          "name": "Borborema",
+          "commodity": "Ouro",
+          "type": "Mina de ouro a céu aberto",
+          "state": "RN",
+          "municipality": "Currais Novos",
+          "status": "Produção",
+          "lat": -6.26,
+          "lng": -36.52,
+          "note": "Atingiu produção comercial em 2025."
+        },
+        {
+          "name": "Mineração Serra Grande (MSG)",
+          "commodity": "Ouro",
+          "type": "Minas subterrâneas e a céu aberto",
+          "state": "GO",
+          "municipality": "Crixás",
+          "status": "Produção",
+          "lat": -14.55,
+          "lng": -49.97,
+          "note": "Adquirida da AngloGold Ashanti; três minas subterrâneas e uma a céu aberto."
+        },
+        {
+          "name": "Matupá",
+          "commodity": "Ouro",
+          "type": "Projeto de ouro",
+          "state": "MT",
+          "municipality": "Matupá",
+          "status": "Desenvolvimento",
+          "lat": -10.17,
+          "lng": -54.94,
+          "note": "Projeto de ouro em desenvolvimento no norte do Mato Grosso."
+        },
+        {
+          "name": "Carajás (cobre)",
+          "commodity": "Cobre",
+          "type": "Projeto de cobre",
+          "state": "PA",
+          "municipality": "Parauapebas",
+          "status": "Exploração",
+          "lat": -6.07,
+          "lng": -50.16,
+          "note": "Projeto de cobre em exploração na região de Carajás."
         }
       ]
     }

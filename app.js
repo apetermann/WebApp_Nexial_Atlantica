@@ -87,10 +87,29 @@ let TENEMENT_ITEMS = [];             // [{ layer, sub }] para filtrar por subst�
 let TENEMENT_TOTAL = 0;
 let LEGEND_COMMODITY_HTML = "";
 let LEGEND_AREA_HTML = "";
+let QUOTES = null;                   // { asOf, quotes: { "BOLSA:TICKER": {price, marketCap, currency} } }
+
+const CURRENCY_SYMBOL = { AUD: "A$", CAD: "C$", USD: "US$", BRL: "R$", GBP: "£", EUR: "€" };
+function moneyPrefix(cur) { return CURRENCY_SYMBOL[cur] || (cur ? cur + " " : ""); }
+function fmtPrice(v, cur) {
+  if (v == null) return null;
+  return moneyPrefix(cur) + v.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+function fmtCap(v, cur) {
+  if (v == null) return null;
+  const p = moneyPrefix(cur);
+  if (v >= 1e9) return p + (v / 1e9).toLocaleString("pt-BR", { maximumFractionDigits: 2 }) + " B";
+  if (v >= 1e6) return p + (v / 1e6).toLocaleString("pt-BR", { maximumFractionDigits: 1 }) + " M";
+  if (v >= 1e3) return p + (v / 1e3).toLocaleString("pt-BR", { maximumFractionDigits: 0 }) + " mil";
+  return p + v.toLocaleString("pt-BR");
+}
+function quoteFor(c) {
+  return (QUOTES && QUOTES.quotes) ? QUOTES.quotes[`${c.exchange}:${c.ticker}`] : null;
+}
 
 async function init() {
   try {
-    const res = await fetch("data/companies.json");
+    const res = await fetch("data/companies.json", { cache: "no-cache" });
     DATA = await res.json();
   } catch (e) {
     document.getElementById("companyList").innerHTML =
@@ -104,6 +123,7 @@ async function init() {
   renderFooter();
   render();
   loadTenements();
+  loadQuotes();
 
   // Camada de empresas
   document.getElementById("search").addEventListener("input", render);
@@ -167,6 +187,9 @@ function popupHtml(company, p) {
   const site = company.website
     ? `<a class="popup-link" href="${company.website}" target="_blank" rel="noopener">Site da empresa ↗</a>`
     : "";
+  const q = quoteFor(company);
+  const price = q && fmtPrice(q.price, q.currency);
+  const cap = q && fmtCap(q.marketCap, q.currency);
   return `
     <div class="popup-title">${p.name}</div>
     <div class="popup-sub">${company.name} · <b>${company.exchange}:${company.ticker}</b></div>
@@ -175,6 +198,8 @@ function popupHtml(company, p) {
     <div class="popup-row"><b>Local:</b> ${p.municipality || "—"} — ${STATE_NAMES[p.state] || p.state}</div>
     <div class="popup-row"><b>Status:</b>
       <span class="status-badge" style="background:${statusColor}33;color:${statusColor}">${p.status}</span></div>
+    ${price ? `<div class="popup-row"><b>Cotação:</b> ${price}</div>` : ""}
+    ${cap ? `<div class="popup-row"><b>Valor de mercado:</b> ${cap}</div>` : ""}
     ${p.note ? `<div class="popup-note">${p.note}</div>` : ""}
     ${site}
   `;
@@ -183,7 +208,7 @@ function popupHtml(company, p) {
 async function loadTenements() {
   let data;
   try {
-    const res = await fetch("data/tenements.geojson");
+    const res = await fetch("data/tenements.geojson", { cache: "no-cache" });
     data = await res.json();
   } catch (e) {
     return; // sem áreas; o resto do app segue normal
@@ -388,6 +413,7 @@ function render() {
           <span class="ticker">${c.exchange}:${c.ticker}</span>
         </div>
         <div class="card-commodity">${c.primaryCommodity}</div>
+        ${quoteLine(c)}
         <div class="card-projects">${chips}</div>
       </li>`;
   }).join("");
@@ -419,6 +445,32 @@ function focusCompany(ticker) {
   } else {
     MAP.flyToBounds(L.latLngBounds(pts).pad(0.4), { duration: 0.8 });
   }
+}
+
+async function loadQuotes() {
+  try {
+    const res = await fetch("data/quotes.json", { cache: "no-cache" });
+    QUOTES = await res.json();
+  } catch (e) {
+    return; // sem cotações; o app segue normal
+  }
+  render(); // re-renderiza os cards já com preço/valor de mercado
+  const el = document.getElementById("quotesAsOf");
+  if (el && QUOTES.asOf) {
+    const d = new Date(QUOTES.asOf);
+    el.textContent = "Cotações atualizadas em " + d.toLocaleDateString("pt-BR") +
+      " (fontes públicas via Yahoo Finance).";
+  }
+}
+
+function quoteLine(c) {
+  const q = quoteFor(c);
+  if (!q) return "";
+  const price = fmtPrice(q.price, q.currency);
+  const cap = fmtCap(q.marketCap, q.currency);
+  if (!price && !cap) return "";
+  return `<div class="card-quote">${price ? `<span class="q-price">${price}</span>` : ""}` +
+    `${cap ? `<span class="q-cap">Cap. ${cap}</span>` : ""}</div>`;
 }
 
 function renderFooter() {

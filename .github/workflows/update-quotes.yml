@@ -1,0 +1,41 @@
+name: Atualizar cotações
+
+on:
+  schedule:
+    # Diariamente às 22:30 UTC (após o fechamento dos mercados das Américas).
+    - cron: "30 22 * * *"
+  workflow_dispatch:
+
+# Necessário para o bot commitar o quotes.json de volta ao repositório.
+permissions:
+  contents: write
+
+concurrency:
+  group: quotes
+  cancel-in-progress: false
+
+jobs:
+  quotes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install yfinance
+
+      - name: Buscar cotações
+        run: python scripts/fetch_quotes.py
+
+      - name: Commitar quotes.json (se mudou)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/quotes.json
+          git diff --staged --quiet || git commit -m "Atualiza cotações (auto)"
+          git push
