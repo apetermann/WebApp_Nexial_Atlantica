@@ -35,6 +35,7 @@ html, body {
   display: flex;
   flex-direction: column;
   z-index: 1000;
+  overflow-y: auto; /* a barra inteira rola: logo, filtros, lista e rodapé */
 }
 
 .sidebar-header {
@@ -133,8 +134,7 @@ html, body {
   list-style: none;
   margin: 0;
   padding: 8px;
-  overflow-y: auto;
-  flex: 1;
+  flex: 0 0 auto; /* altura natural; a rolagem é da barra inteira (#sidebar) */
 }
 
 .company-card {

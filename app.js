@@ -93,7 +93,11 @@ const CURRENCY_SYMBOL = { AUD: "A$", CAD: "C$", USD: "US$", BRL: "R$", GBP: "£"
 function moneyPrefix(cur) { return CURRENCY_SYMBOL[cur] || (cur ? cur + " " : ""); }
 function fmtPrice(v, cur) {
   if (v == null) return null;
-  return moneyPrefix(cur) + v.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  // Ações de centavos (juniores) precisam de mais casas para não virar 0,00.
+  const opts = v < 1
+    ? { minimumFractionDigits: 2, maximumFractionDigits: 4 }
+    : { minimumFractionDigits: 2, maximumFractionDigits: 2 };
+  return moneyPrefix(cur) + v.toLocaleString("pt-BR", opts);
 }
 function fmtCap(v, cur) {
   if (v == null) return null;
@@ -173,7 +177,7 @@ function setupMap() {
         weight: 2,
         opacity: 1,
         fillOpacity: 0.9,
-      }).bindPopup(popupHtml(company, p));
+      }).bindPopup(() => popupHtml(company, p)); // função: reavalia ao abrir (já com cotações)
       marker._company = company;
       MARKERS[`${company.ticker}::${p.name}`] = marker;
     }
