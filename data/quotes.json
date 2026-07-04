@@ -1,5 +1,5 @@
 {
- "asOf": "2026-07-03T23:33:08+00:00",
+ "asOf": "2026-07-04T23:29:37+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
@@ -12,7 +12,7 @@
   "ASX:VMM": {
    "symbol": "VMM.AX",
    "price": 3.89,
-   "marketCap": 503621578,
+   "marketCap": 506577978,
    "currency": "AUD"
   },
   "ASX:CTM": {
@@ -222,7 +222,7 @@
   "TSX.V:ALTA": {
    "symbol": "ALTA.V",
    "price": 0.2,
-   "marketCap": 59331610,
+   "marketCap": 59331611,
    "currency": "CAD"
   },
   "TSX.V:LGC": {
@@ -252,7 +252,7 @@
   "TSX.V:LRA": {
    "symbol": "LRA.V",
    "price": 3.85,
-   "marketCap": 238689843,
+   "marketCap": 238689837,
    "currency": "CAD"
   },
   "TSX.V:HHH": {
@@ -276,7 +276,7 @@
   "TSX.V:VO": {
    "symbol": "VO.V",
    "price": 0.08,
-   "marketCap": 20396325,
+   "marketCap": 20396324,
    "currency": "CAD"
   },
   "TSX.V:IFOS": {
@@ -293,8 +293,8 @@
   },
   "TSX.V:TRS": {
    "symbol": "TRS.V",
-   "price": 0.055,
-   "marketCap": 1387862,
+   "price": 0.06,
+   "marketCap": 1514031,
    "currency": "CAD"
   },
   "NASDAQ:SGML": {
