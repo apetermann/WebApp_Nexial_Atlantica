@@ -116,6 +116,11 @@ input[type="checkbox"] { accent-color: var(--accent-2); width: 15px; height: 15p
 }
 .layer-toggle input { width: auto; cursor: pointer; flex: 0 0 auto; }
 .layer-toggle b { font-weight: 700; }
+.ten2-dot {
+  width: 11px; height: 11px; border-radius: 3px;
+  background: rgba(225, 29, 72, 0.35); border: 1.5px solid #e11d48;
+  flex: 0 0 auto;
+}
 .layer-toggle button {
   margin-left: auto;
   background: var(--panel-2);

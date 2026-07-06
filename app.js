@@ -85,8 +85,12 @@ let COMPANIES_LAYER = null;          // grupo com os marcadores de empresas
 let TENEMENTS_LAYER = null;          // grupo (geoJSON) com os polígonos das áreas
 let TENEMENT_ITEMS = [];             // [{ layer, sub }] para filtrar por substância
 let TENEMENT_TOTAL = 0;
+let TENEMENTS2_LAYER = null;         // "Novas Áreas" (Felix) — cor única
+let TENEMENT2_TOTAL = 0;
+const NOVAS_COLOR = "#e11d48";       // carmim, distinto das áreas por substância
 let LEGEND_COMMODITY_HTML = "";
 let LEGEND_AREA_HTML = "";
+let LEGEND_NOVAS_HTML = "";
 let QUOTES = null;                   // { asOf, quotes: { "BOLSA:TICKER": {price, marketCap, currency} } }
 
 const CURRENCY_SYMBOL = { AUD: "A$", CAD: "C$", USD: "US$", BRL: "R$", GBP: "£", EUR: "€" };
@@ -127,6 +131,7 @@ async function init() {
   renderFooter();
   render();
   loadTenements();
+  loadTenements2();
   loadQuotes();
 
   // Camada de empresas
@@ -145,6 +150,18 @@ async function init() {
   document.getElementById("tenementsFocus").addEventListener("click", () => {
     if (TENEMENTS_LAYER && MAP.hasLayer(TENEMENTS_LAYER)) {
       MAP.flyToBounds(TENEMENTS_LAYER.getBounds().pad(0.2), { duration: 0.8 });
+    }
+  });
+
+  // Camada de Novas Áreas (Felix)
+  document.getElementById("tenements2Toggle").addEventListener("change", e => {
+    if (!TENEMENTS2_LAYER) return;
+    if (e.target.checked) TENEMENTS2_LAYER.addTo(MAP);
+    else MAP.removeLayer(TENEMENTS2_LAYER);
+  });
+  document.getElementById("tenements2Focus").addEventListener("click", () => {
+    if (TENEMENTS2_LAYER && MAP.hasLayer(TENEMENTS2_LAYER)) {
+      MAP.flyToBounds(TENEMENTS2_LAYER.getBounds().pad(0.2), { duration: 0.8 });
     }
   });
 }
@@ -281,6 +298,49 @@ function populateSubstanceFilter(data) {
   });
 }
 
+async function loadTenements2() {
+  let data;
+  try {
+    const res = await fetch("data/tenements-novas.geojson", { cache: "no-cache" });
+    data = await res.json();
+  } catch (e) {
+    return;
+  }
+  TENEMENT2_TOTAL = (data.features || []).length;
+  const el = document.getElementById("tenements2Count");
+  if (el) el.textContent = TENEMENT2_TOTAL;
+
+  TENEMENTS2_LAYER = L.geoJSON(data, {
+    pane: "tenements",
+    style: () => ({ color: NOVAS_COLOR, weight: 1, opacity: 0.95, fillColor: NOVAS_COLOR, fillOpacity: 0.28 }),
+    onEachFeature: (f, layer) => {
+      layer.bindPopup(tenement2Popup(f.properties), { maxWidth: 280 });
+      layer.on("mouseover", () => layer.setStyle({ weight: 2.5, fillOpacity: 0.45 }));
+      layer.on("mouseout", () => TENEMENTS2_LAYER.resetStyle(layer));
+    },
+  }).addTo(MAP);
+
+  LEGEND_NOVAS_HTML =
+    `<h4 class="legend-h4-2">Novas Áreas (Felix)</h4>` +
+    `<div class="legend-item"><span class="dot" style="background:${NOVAS_COLOR}"></span>Processos<span class="legend-count">${TENEMENT2_TOTAL}</span></div>`;
+  renderLegend();
+}
+
+function tenement2Popup(p) {
+  const row = (label, val) => val ? `<div class="popup-row"><b>${label}:</b> ${val}</div>` : "";
+  const area = p.area_ha ? `${p.area_ha} ha` : "";
+  const local = [p.municipio, STATE_NAMES[p.uf] || p.uf].filter(Boolean).join(" — ");
+  return `
+    <div class="popup-title">Processo ${p.processo || "—"}</div>
+    <div class="popup-sub">Nova área · Atlântica Minas</div>
+    ${row("Substância", p.substancia ? prettifySub(p.substancia) : "")}
+    ${row("Fase", p.fase)}
+    ${row("Área", area)}
+    ${row("Local", local)}
+    ${row("Requerente", p.titular)}
+  `;
+}
+
 function tenementPopup(p) {
   const row = (label, val) => val ? `<div class="popup-row"><b>${label}:</b> ${val}</div>` : "";
   const area = p.area_ha ? `${p.area_ha} ha` : "";
@@ -331,7 +391,7 @@ function buildAreaLegend(data) {
 }
 
 function renderLegend() {
-  document.getElementById("legend").innerHTML = LEGEND_COMMODITY_HTML + LEGEND_AREA_HTML;
+  document.getElementById("legend").innerHTML = LEGEND_COMMODITY_HTML + LEGEND_AREA_HTML + LEGEND_NOVAS_HTML;
 }
 
 function populateFilters() {
