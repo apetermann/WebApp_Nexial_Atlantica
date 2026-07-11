@@ -1,5 +1,5 @@
 {
- "asOf": "2026-07-10T23:27:07+00:00",
+ "asOf": "2026-07-11T23:23:12+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
@@ -221,8 +221,8 @@
   },
   "TSX.V:ALTA": {
    "symbol": "ALTA.V",
-   "price": 0.175,
-   "marketCap": 51915159,
+   "price": 0.18,
+   "marketCap": 53398451,
    "currency": "CAD"
   },
   "TSX.V:LGC": {
@@ -263,8 +263,8 @@
   },
   "TSX.V:MAX": {
    "symbol": "MAX.V",
-   "price": 0.275,
-   "marketCap": 15264516,
+   "price": 0.28,
+   "marketCap": 15542053,
    "currency": "CAD"
   },
   "TSX.V:BRVO": {
@@ -293,8 +293,8 @@
   },
   "TSX.V:TRS": {
    "symbol": "TRS.V",
-   "price": 0.055,
-   "marketCap": 1387862,
+   "price": 0.06,
+   "marketCap": 1514031,
    "currency": "CAD"
   },
   "NASDAQ:SGML": {
