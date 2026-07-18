@@ -1,5 +1,5 @@
 {
- "asOf": "2026-07-17T23:14:40+00:00",
+ "asOf": "2026-07-18T23:23:48+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
@@ -126,7 +126,7 @@
   "ASX:OCN": {
    "symbol": "OCN.AX",
    "price": 0.38,
-   "marketCap": 75372266,
+   "marketCap": 89451052,
    "currency": "AUD"
   },
   "ASX:AUZ": {
@@ -233,8 +233,8 @@
   },
   "TSX.V:JZR": {
    "symbol": "JZR.V",
-   "price": 0.245,
-   "marketCap": 19415775,
+   "price": 0.25,
+   "marketCap": 19812015,
    "currency": "CAD"
   },
   "TSX.V:LTH": {
@@ -263,8 +263,8 @@
   },
   "TSX.V:MAX": {
    "symbol": "MAX.V",
-   "price": 0.245,
-   "marketCap": 13599296,
+   "price": 0.25,
+   "marketCap": 13876833,
    "currency": "CAD"
   },
   "TSX.V:BRVO": {
@@ -275,8 +275,8 @@
   },
   "TSX.V:VO": {
    "symbol": "VO.V",
-   "price": 0.075,
-   "marketCap": 19121555,
+   "price": 0.08,
+   "marketCap": 20396324,
    "currency": "CAD"
   },
   "TSX.V:IFOS": {
@@ -293,8 +293,8 @@
   },
   "TSX.V:TRS": {
    "symbol": "TRS.V",
-   "price": 0.055,
-   "marketCap": 1387862,
+   "price": 0.06,
+   "marketCap": 1514031,
    "currency": "CAD"
   },
   "NASDAQ:SGML": {
