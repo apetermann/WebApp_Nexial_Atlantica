@@ -299,8 +299,8 @@ input[type="checkbox"] { accent-color: var(--accent-2); width: 15px; height: 15p
   #mapWrap {
     order: 1;
     flex: none;
-    height: 56vh;
-    min-height: 320px;
+    height: 78vh;
+    min-height: 440px;
     position: relative;
   }
 
