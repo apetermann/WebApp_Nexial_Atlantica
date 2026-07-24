@@ -6,7 +6,7 @@
   <title>Áreas Atlântica Minas e Empresas Listadas — Mapa de Mineração</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
-  <link rel="stylesheet" href="styles.css?v=11" />
+  <link rel="stylesheet" href="styles.css?v=12" />
 </head>
 <body>
   <div id="app">
@@ -67,11 +67,16 @@
 
     <main id="mapWrap">
       <div id="map"></div>
-      <div id="legend" class="legend"></div>
+      <div id="legend" class="legend">
+        <button id="legendToggle" class="legend-toggle" aria-label="Mostrar ou ocultar a legenda">
+          <span class="chev">▾</span> Legenda
+        </button>
+        <div id="legendBody" class="legend-body"></div>
+      </div>
     </main>
   </div>
 
   <script src="vendor/leaflet/leaflet.js"></script>
-  <script src="app.js?v=11"></script>
+  <script src="app.js?v=12"></script>
 </body>
 </html>

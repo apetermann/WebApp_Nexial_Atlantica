@@ -147,6 +147,15 @@ async function init() {
       MAP.flyToBounds(TENEMENTS_LAYER.getBounds().pad(0.2), { duration: 0.8 });
     }
   });
+
+  // Legenda recolhível (começa recolhida no celular para dar mais espaço ao mapa).
+  const legend = document.getElementById("legend");
+  document.getElementById("legendToggle").addEventListener("click", () => {
+    legend.classList.toggle("collapsed");
+  });
+  if (window.matchMedia && window.matchMedia("(max-width: 760px)").matches) {
+    legend.classList.add("collapsed");
+  }
 }
 
 function setupMap() {
@@ -331,7 +340,7 @@ function buildAreaLegend(data) {
 }
 
 function renderLegend() {
-  document.getElementById("legend").innerHTML = LEGEND_COMMODITY_HTML + LEGEND_AREA_HTML;
+  document.getElementById("legendBody").innerHTML = LEGEND_COMMODITY_HTML + LEGEND_AREA_HTML;
 }
 
 function populateFilters() {

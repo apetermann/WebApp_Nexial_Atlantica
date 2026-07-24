@@ -244,6 +244,27 @@ input[type="checkbox"] { accent-color: var(--accent-2); width: 15px; height: 15p
   overflow-y: auto;
   max-width: 220px;
 }
+.legend-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 8px;
+}
+.legend-toggle .chev { display: inline-block; transition: transform .15s; }
+.legend.collapsed { padding: 7px 11px; }
+.legend.collapsed .legend-toggle { margin-bottom: 0; }
+.legend.collapsed .legend-toggle .chev { transform: rotate(-90deg); }
+.legend.collapsed .legend-body { display: none; }
 .legend h4 { margin: 0 0 8px; font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); }
 .legend h4.legend-h4-2 { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
 .legend-item { display: flex; align-items: center; gap: 8px; margin: 4px 0; }
