@@ -1,5 +1,5 @@
 {
- "asOf": "2026-07-31T23:28:37+00:00",
+ "asOf": "2026-08-01T23:26:33+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
@@ -114,7 +114,7 @@
   "ASX:L1M": {
    "symbol": "L1M.AX",
    "price": 0.013,
-   "marketCap": 4417768,
+   "marketCap": 4941379,
    "currency": "AUD"
   },
   "ASX:AL8": {
@@ -264,7 +264,7 @@
   "TSX.V:MAX": {
    "symbol": "MAX.V",
    "price": 0.22,
-   "marketCap": 12211613,
+   "marketCap": 12211612,
    "currency": "CAD"
   },
   "TSX.V:BRVO": {
@@ -288,13 +288,13 @@
   "TSX.V:STS": {
    "symbol": "STS.V",
    "price": 0.195,
-   "marketCap": 27383058,
+   "marketCap": 27383059,
    "currency": "CAD"
   },
   "TSX.V:TRS": {
    "symbol": "TRS.V",
-   "price": 0.055,
-   "marketCap": 1387862,
+   "price": 0.06,
+   "marketCap": 1514031,
    "currency": "CAD"
   },
   "NASDAQ:SGML": {
