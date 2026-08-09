@@ -1,12 +1,12 @@
 {
- "asOf": "2026-08-08T22:55:08+00:00",
+ "asOf": "2026-08-09T22:57:48+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
   "ASX:MEI": {
    "symbol": "MEI.AX",
    "price": 0.2,
-   "marketCap": 581323768,
+   "marketCap": 581323776,
    "currency": "AUD"
   },
   "ASX:VMM": {
