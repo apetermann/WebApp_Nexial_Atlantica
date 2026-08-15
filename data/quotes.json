@@ -1,5 +1,5 @@
 {
- "asOf": "2026-08-14T22:47:07+00:00",
+ "asOf": "2026-08-15T22:45:21+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
@@ -156,7 +156,7 @@
   "TSX:LGO": {
    "symbol": "LGO.TO",
    "price": 1.0,
-   "marketCap": 97328456,
+   "marketCap": 101336861,
    "currency": "CAD"
   },
   "TSX:ARA": {
@@ -198,7 +198,7 @@
   "TSX:GMIN": {
    "symbol": "GMIN.TO",
    "price": 49.98,
-   "marketCap": 14806797975,
+   "marketCap": 14796225156,
    "currency": "CAD"
   },
   "TSX:K": {
@@ -221,8 +221,8 @@
   },
   "TSX.V:ALTA": {
    "symbol": "ALTA.V",
-   "price": 0.175,
-   "marketCap": 51915158,
+   "price": 0.18,
+   "marketCap": 53398451,
    "currency": "CAD"
   },
   "TSX.V:LGC": {
@@ -263,8 +263,8 @@
   },
   "TSX.V:MAX": {
    "symbol": "MAX.V",
-   "price": 0.235,
-   "marketCap": 13044223,
+   "price": 0.24,
+   "marketCap": 13321759,
    "currency": "CAD"
   },
   "TSX.V:BRVO": {
@@ -275,8 +275,8 @@
   },
   "TSX.V:VO": {
    "symbol": "VO.V",
-   "price": 0.075,
-   "marketCap": 19121555,
+   "price": 0.08,
+   "marketCap": 20396324,
    "currency": "CAD"
   },
   "TSX.V:IFOS": {
@@ -293,8 +293,8 @@
   },
   "TSX.V:TRS": {
    "symbol": "TRS.V",
-   "price": 0.055,
-   "marketCap": 1387862,
+   "price": 0.06,
+   "marketCap": 1514031,
    "currency": "CAD"
   },
   "NASDAQ:SGML": {
