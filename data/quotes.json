@@ -1,5 +1,5 @@
 {
- "asOf": "2026-08-21T22:48:13+00:00",
+ "asOf": "2026-08-22T22:46:02+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
@@ -221,8 +221,8 @@
   },
   "TSX.V:ALTA": {
    "symbol": "ALTA.V",
-   "price": 0.175,
-   "marketCap": 51915158,
+   "price": 0.18,
+   "marketCap": 53398451,
    "currency": "CAD"
   },
   "TSX.V:LGC": {
@@ -233,8 +233,8 @@
   },
   "TSX.V:JZR": {
    "symbol": "JZR.V",
-   "price": 0.265,
-   "marketCap": 21000735,
+   "price": 0.27,
+   "marketCap": 21396977,
    "currency": "CAD"
   },
   "TSX.V:LTH": {
@@ -293,8 +293,8 @@
   },
   "TSX.V:TRS": {
    "symbol": "TRS.V",
-   "price": 0.055,
-   "marketCap": 1387862,
+   "price": 0.06,
+   "marketCap": 1514031,
    "currency": "CAD"
   },
   "NASDAQ:SGML": {
