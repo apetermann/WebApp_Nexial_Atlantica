@@ -1,5 +1,5 @@
 {
- "asOf": "2026-08-22T22:46:02+00:00",
+ "asOf": "2026-08-23T22:45:34+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
@@ -198,7 +198,7 @@
   "TSX:GMIN": {
    "symbol": "GMIN.TO",
    "price": 53.54,
-   "marketCap": 15850138368,
+   "marketCap": 15861464273,
    "currency": "CAD"
   },
   "TSX:K": {
