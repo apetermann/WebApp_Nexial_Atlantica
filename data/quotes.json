@@ -1,30 +1,30 @@
 {
- "asOf": "2026-08-28T06:12:52+00:00",
+ "asOf": "2026-08-29T03:46:55+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
   "ASX:MEI": {
    "symbol": "MEI.AX",
-   "price": 0.217,
-   "marketCap": 630736258,
+   "price": 0.215,
+   "marketCap": 624923052,
    "currency": "AUD"
   },
   "ASX:VMM": {
    "symbol": "VMM.AX",
-   "price": 3.92,
-   "marketCap": 561760902,
+   "price": 3.95,
+   "marketCap": 566060089,
    "currency": "AUD"
   },
   "ASX:CTM": {
    "symbol": "CTM.AX",
-   "price": 0.55,
-   "marketCap": 311933409,
+   "price": 0.56,
+   "marketCap": 317604920,
    "currency": "AUD"
   },
   "ASX:SGQ": {
    "symbol": "SGQ.AX",
-   "price": 0.09,
-   "marketCap": 422480754,
+   "price": 0.091,
+   "marketCap": 427174959,
    "currency": "AUD"
   },
   "ASX:EQN": {
@@ -41,8 +41,8 @@
   },
   "ASX:BRE": {
    "symbol": "BRE.AX",
-   "price": 4.28,
-   "marketCap": 1199057963,
+   "price": 4.25,
+   "marketCap": 1190653293,
    "currency": "AUD"
   },
   "ASX:BCM": {
@@ -107,8 +107,8 @@
   },
   "ASX:ALV": {
    "symbol": "ALV.AX",
-   "price": 0.026,
-   "marketCap": 7461632,
+   "price": 0.025,
+   "marketCap": 7174646,
    "currency": "AUD"
   },
   "ASX:L1M": {
@@ -137,110 +137,110 @@
   },
   "TSX:ERO": {
    "symbol": "ERO.TO",
-   "price": 55.17,
-   "marketCap": 5754376071,
+   "price": 53.99,
+   "marketCap": 5631299330,
    "currency": "CAD"
   },
   "TSX:NEXA": {
    "symbol": "NEXA",
-   "price": 13.9,
-   "marketCap": 1840896642,
+   "price": 13.35,
+   "marketCap": 1768055507,
    "currency": "USD"
   },
   "TSX:LUN": {
    "symbol": "LUN.TO",
-   "price": 39.18,
-   "marketCap": 33353839875,
+   "price": 38.84,
+   "marketCap": 33064398564,
    "currency": "CAD"
   },
   "TSX:LGO": {
    "symbol": "LGO.TO",
-   "price": 1.05,
-   "marketCap": 108290695,
+   "price": 1.02,
+   "marketCap": 105196678,
    "currency": "CAD"
   },
   "TSX:ARA": {
    "symbol": "ARA.TO",
-   "price": 4.14,
-   "marketCap": 1026900470,
+   "price": 3.91,
+   "marketCap": 969850497,
    "currency": "CAD"
   },
   "TSX:NPK": {
    "symbol": "NPK.TO",
-   "price": 0.91,
-   "marketCap": 51363791,
+   "price": 0.89,
+   "marketCap": 50234914,
    "currency": "CAD"
   },
   "TSX:JAG": {
    "symbol": "JAG.TO",
-   "price": 8.17,
-   "marketCap": 697153140,
+   "price": 7.72,
+   "marketCap": 658754229,
    "currency": "CAD"
   },
   "TSX:BSX": {
    "symbol": "BSX.TO",
-   "price": 1.57,
-   "marketCap": 892132848,
+   "price": 1.5,
+   "marketCap": 852356196,
    "currency": "CAD"
   },
   "TSX:SBI": {
    "symbol": "SBI.TO",
-   "price": 6.05,
-   "marketCap": 461661962,
+   "price": 5.94,
+   "marketCap": 453268098,
    "currency": "CAD"
   },
   "TSX:GOLD": {
    "symbol": "GOLD.TO",
-   "price": 1.58,
-   "marketCap": 339382694,
+   "price": 1.51,
+   "marketCap": 324346741,
    "currency": "CAD"
   },
   "TSX:GMIN": {
    "symbol": "GMIN.TO",
-   "price": 54.88,
-   "marketCap": 16246835930,
+   "price": 53.46,
+   "marketCap": 15826454392,
    "currency": "CAD"
   },
   "TSX:K": {
    "symbol": "K.TO",
-   "price": 45.09,
-   "marketCap": 53487597357,
+   "price": 43.49,
+   "marketCap": 51589613904,
    "currency": "CAD"
   },
   "TSX:MNO": {
    "symbol": "MNO.TO",
-   "price": 1.8,
-   "marketCap": 876994340,
+   "price": 1.82,
+   "marketCap": 886738771,
    "currency": "CAD"
   },
   "TSX.V:CBR": {
    "symbol": "CBR.V",
-   "price": 1.5,
-   "marketCap": 519260554,
+   "price": 1.44,
+   "marketCap": 498490152,
    "currency": "CAD"
   },
   "TSX.V:ALTA": {
    "symbol": "ALTA.V",
-   "price": 0.22,
-   "marketCap": 65264771,
+   "price": 0.21,
+   "marketCap": 62298188,
    "currency": "CAD"
   },
   "TSX.V:LGC": {
    "symbol": "LGC.V",
-   "price": 3.7,
-   "marketCap": 230322720,
+   "price": 3.61,
+   "marketCap": 224720266,
    "currency": "CAD"
   },
   "TSX.V:JZR": {
    "symbol": "JZR.V",
-   "price": 0.27,
-   "marketCap": 21396977,
+   "price": 0.3,
+   "marketCap": 23774419,
    "currency": "CAD"
   },
   "TSX.V:LTH": {
    "symbol": "LTH.V",
-   "price": 0.63,
-   "marketCap": 124299760,
+   "price": 0.61,
+   "marketCap": 120353740,
    "currency": "CAD"
   },
   "TSX.V:IMM": {
@@ -251,74 +251,74 @@
   },
   "TSX.V:LRA": {
    "symbol": "LRA.V",
-   "price": 4.69,
-   "marketCap": 290767631,
+   "price": 4.5,
+   "marketCap": 278988129,
    "currency": "CAD"
   },
   "TSX.V:HHH": {
    "symbol": "HHH.V",
-   "price": 4.79,
-   "marketCap": 198037250,
+   "price": 4.83,
+   "marketCap": 199691004,
    "currency": "CAD"
   },
   "TSX.V:MAX": {
    "symbol": "MAX.V",
-   "price": 0.23,
-   "marketCap": 12766686,
+   "price": 0.205,
+   "marketCap": 11379002,
    "currency": "CAD"
   },
   "TSX.V:BRVO": {
    "symbol": "BRVO.V",
-   "price": 3.4,
-   "marketCap": 465993772,
+   "price": 3.3,
+   "marketCap": 452288053,
    "currency": "CAD"
   },
   "TSX.V:VO": {
    "symbol": "VO.V",
    "price": 0.08,
-   "marketCap": 20396324,
+   "marketCap": 20396325,
    "currency": "CAD"
   },
   "TSX.V:IFOS": {
    "symbol": "IFOS.V",
-   "price": 2.44,
-   "marketCap": 475263896,
+   "price": 2.45,
+   "marketCap": 477211697,
    "currency": "CAD"
   },
   "TSX.V:STS": {
    "symbol": "STS.V",
-   "price": 0.23,
-   "marketCap": 32637117,
+   "price": 0.22,
+   "marketCap": 31218112,
    "currency": "CAD"
   },
   "TSX.V:TRS": {
    "symbol": "TRS.V",
-   "price": 0.06,
-   "marketCap": 1514031,
+   "price": 0.055,
+   "marketCap": 1387862,
    "currency": "CAD"
   },
   "NASDAQ:SGML": {
    "symbol": "SGML",
-   "price": 12.61,
-   "marketCap": 1419486388,
+   "price": 12.26,
+   "marketCap": 1380087543,
    "currency": "USD"
   },
   "NASDAQ:ATLX": {
    "symbol": "ATLX",
-   "price": 3.305,
-   "marketCap": 99479857,
+   "price": 3.15,
+   "marketCap": 94814388,
    "currency": "USD"
   },
   "NASDAQ:ATCX": {
    "symbol": "ATCX",
-   "price": 3.77,
-   "marketCap": 19164176,
+   "price": 3.52,
+   "marketCap": 17893342,
    "currency": "USD"
   },
   "NASDAQ:AUGO": {
    "symbol": "AUGO",
-   "price": 89.12,
-   "marketCap": 7471539678,
+   "price": 84.53,
+   "marketCap": 7086728236,
    "currency": "USD"
   }
  }
