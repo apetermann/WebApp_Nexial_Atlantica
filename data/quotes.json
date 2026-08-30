@@ -1,5 +1,5 @@
 {
- "asOf": "2026-08-29T03:46:55+00:00",
+ "asOf": "2026-08-30T00:29:42+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
@@ -216,7 +216,7 @@
   "TSX.V:CBR": {
    "symbol": "CBR.V",
    "price": 1.44,
-   "marketCap": 498490152,
+   "marketCap": 498490132,
    "currency": "CAD"
   },
   "TSX.V:ALTA": {
@@ -263,8 +263,8 @@
   },
   "TSX.V:MAX": {
    "symbol": "MAX.V",
-   "price": 0.205,
-   "marketCap": 11379002,
+   "price": 0.21,
+   "marketCap": 11656539,
    "currency": "CAD"
   },
   "TSX.V:BRVO": {
@@ -276,7 +276,7 @@
   "TSX.V:VO": {
    "symbol": "VO.V",
    "price": 0.08,
-   "marketCap": 20396325,
+   "marketCap": 20396324,
    "currency": "CAD"
   },
   "TSX.V:IFOS": {
@@ -293,8 +293,8 @@
   },
   "TSX.V:TRS": {
    "symbol": "TRS.V",
-   "price": 0.055,
-   "marketCap": 1387862,
+   "price": 0.06,
+   "marketCap": 1514031,
    "currency": "CAD"
   },
   "NASDAQ:SGML": {
