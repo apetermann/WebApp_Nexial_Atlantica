@@ -1,5 +1,5 @@
 {
- "asOf": "2026-09-12T00:25:57+00:00",
+ "asOf": "2026-09-13T00:05:35+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
@@ -90,7 +90,7 @@
   "ASX:CR3": {
    "symbol": "CR3.AX",
    "price": 0.0065,
-   "marketCap": 4633542,
+   "marketCap": 5796944,
    "currency": "AUD"
   },
   "ASX:SUM": {
@@ -144,13 +144,13 @@
   "TSX:NEXA": {
    "symbol": "NEXA",
    "price": 13.31,
-   "marketCap": 1762757912,
+   "marketCap": 1762757967,
    "currency": "USD"
   },
   "TSX:LUN": {
    "symbol": "LUN.TO",
    "price": 33.45,
-   "marketCap": 28475905068,
+   "marketCap": 28477236177,
    "currency": "CAD"
   },
   "TSX:LGO": {
@@ -216,7 +216,7 @@
   "TSX.V:CBR": {
    "symbol": "CBR.V",
    "price": 1.55,
-   "marketCap": 536569223,
+   "marketCap": 537902223,
    "currency": "CAD"
   },
   "TSX.V:ALTA": {
@@ -275,8 +275,8 @@
   },
   "TSX.V:VO": {
    "symbol": "VO.V",
-   "price": 0.065,
-   "marketCap": 16572013,
+   "price": 0.07,
+   "marketCap": 17846784,
    "currency": "CAD"
   },
   "TSX.V:IFOS": {
@@ -293,8 +293,8 @@
   },
   "TSX.V:TRS": {
    "symbol": "TRS.V",
-   "price": 0.055,
-   "marketCap": 1387862,
+   "price": 0.06,
+   "marketCap": 1514031,
    "currency": "CAD"
   },
   "NASDAQ:SGML": {
@@ -306,19 +306,19 @@
   "NASDAQ:ATLX": {
    "symbol": "ATLX",
    "price": 3.03,
-   "marketCap": 91202409,
+   "marketCap": 91202408,
    "currency": "USD"
   },
   "NASDAQ:ATCX": {
    "symbol": "ATCX",
    "price": 3.31,
-   "marketCap": 16825842,
+   "marketCap": 16825841,
    "currency": "USD"
   },
   "NASDAQ:AUGO": {
    "symbol": "AUGO",
    "price": 87.08,
-   "marketCap": 7300512288,
+   "marketCap": 7300512441,
    "currency": "USD"
   }
  }
