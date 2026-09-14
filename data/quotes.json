@@ -1,18 +1,18 @@
 {
- "asOf": "2026-09-13T00:05:35+00:00",
+ "asOf": "2026-09-14T00:18:54+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
   "ASX:MEI": {
    "symbol": "MEI.AX",
    "price": 0.19,
-   "marketCap": 552257564,
+   "marketCap": 552257571,
    "currency": "AUD"
   },
   "ASX:VMM": {
    "symbol": "VMM.AX",
    "price": 3.57,
-   "marketCap": 575137245,
+   "marketCap": 575137256,
    "currency": "AUD"
   },
   "ASX:CTM": {
@@ -24,7 +24,7 @@
   "ASX:SGQ": {
    "symbol": "SGQ.AX",
    "price": 0.068,
-   "marketCap": 319207685,
+   "marketCap": 319207668,
    "currency": "AUD"
   },
   "ASX:EQN": {
@@ -53,8 +53,8 @@
   },
   "ASX:ENV": {
    "symbol": "ENV.AX",
-   "price": 0.0025,
-   "marketCap": 4833140,
+   "price": 0.002,
+   "marketCap": 3866512,
    "currency": "AUD"
   },
   "ASX:SLM": {
@@ -72,13 +72,13 @@
   "ASX:AGR": {
    "symbol": "AGR.AX",
    "price": 0.015,
-   "marketCap": 36000310,
+   "marketCap": 36000311,
    "currency": "AUD"
   },
   "ASX:AXL": {
    "symbol": "AXL.AX",
    "price": 0.075,
-   "marketCap": 13196587,
+   "marketCap": 13196586,
    "currency": "AUD"
   },
   "ASX:PEC": {
@@ -89,8 +89,8 @@
   },
   "ASX:CR3": {
    "symbol": "CR3.AX",
-   "price": 0.0065,
-   "marketCap": 5796944,
+   "price": 0.006,
+   "marketCap": 5351025,
    "currency": "AUD"
   },
   "ASX:SUM": {
@@ -102,7 +102,7 @@
   "ASX:PNN": {
    "symbol": "PNN.AX",
    "price": 0.155,
-   "marketCap": 67845677,
+   "marketCap": 67845676,
    "currency": "AUD"
   },
   "ASX:ALV": {
@@ -126,13 +126,13 @@
   "ASX:OCN": {
    "symbol": "OCN.AX",
    "price": 0.37,
-   "marketCap": 87097079,
+   "marketCap": 87097078,
    "currency": "AUD"
   },
   "ASX:AUZ": {
    "symbol": "AUZ.AX",
    "price": 0.032,
-   "marketCap": 70047294,
+   "marketCap": 70047291,
    "currency": "AUD"
   },
   "TSX:ERO": {
