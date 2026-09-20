@@ -1,5 +1,5 @@
 {
- "asOf": "2026-09-19T00:27:34+00:00",
+ "asOf": "2026-09-20T00:12:39+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
@@ -132,7 +132,7 @@
   "ASX:AUZ": {
    "symbol": "AUZ.AX",
    "price": 0.027,
-   "marketCap": 59102403,
+   "marketCap": 59436123,
    "currency": "AUD"
   },
   "TSX:ERO": {
@@ -144,13 +144,13 @@
   "TSX:NEXA": {
    "symbol": "NEXA",
    "price": 13.01,
-   "marketCap": 1723026329,
+   "marketCap": 1723026359,
    "currency": "USD"
   },
   "TSX:LUN": {
    "symbol": "LUN.TO",
    "price": 33.55,
-   "marketCap": 28561033528,
+   "marketCap": 28562368617,
    "currency": "CAD"
   },
   "TSX:LGO": {
@@ -216,7 +216,7 @@
   "TSX.V:CBR": {
    "symbol": "CBR.V",
    "price": 1.55,
-   "marketCap": 536569223,
+   "marketCap": 537902223,
    "currency": "CAD"
   },
   "TSX.V:ALTA": {
@@ -233,8 +233,8 @@
   },
   "TSX.V:JZR": {
    "symbol": "JZR.V",
-   "price": 0.275,
-   "marketCap": 21793217,
+   "price": 0.28,
+   "marketCap": 22189457,
    "currency": "CAD"
   },
   "TSX.V:LTH": {
@@ -275,8 +275,8 @@
   },
   "TSX.V:VO": {
    "symbol": "VO.V",
-   "price": 0.065,
-   "marketCap": 16572013,
+   "price": 0.07,
+   "marketCap": 17846784,
    "currency": "CAD"
   },
   "TSX.V:IFOS": {
@@ -293,26 +293,26 @@
   },
   "TSX.V:TRS": {
    "symbol": "TRS.V",
-   "price": 0.055,
-   "marketCap": 1387862,
+   "price": 0.06,
+   "marketCap": 1514031,
    "currency": "CAD"
   },
   "NASDAQ:SGML": {
    "symbol": "SGML",
    "price": 9.97,
-   "marketCap": 1122306080,
+   "marketCap": 1122306110,
    "currency": "USD"
   },
   "NASDAQ:ATLX": {
    "symbol": "ATLX",
    "price": 2.9,
-   "marketCap": 87289434,
+   "marketCap": 87289437,
    "currency": "USD"
   },
   "NASDAQ:ATCX": {
    "symbol": "ATCX",
    "price": 3.185,
-   "marketCap": 16190425,
+   "marketCap": 16190424,
    "currency": "USD"
   },
   "NASDAQ:AUGO": {
