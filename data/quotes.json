@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-10T01:50:49+00:00",
+ "asOf": "2026-10-11T01:06:12+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
@@ -216,7 +216,7 @@
   "TSX.V:CBR": {
    "symbol": "CBR.V",
    "price": 1.4,
-   "marketCap": 484643175,
+   "marketCap": 485847175,
    "currency": "CAD"
   },
   "TSX.V:ALTA": {
