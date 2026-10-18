@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-17T00:39:07+00:00",
+ "asOf": "2026-10-18T00:07:57+00:00",
  "count": 53,
  "withPrice": 49,
  "quotes": {
@@ -144,7 +144,7 @@
   "TSX:NEXA": {
    "symbol": "NEXA",
    "price": 12.52,
-   "marketCap": 1658131409,
+   "marketCap": 1658131470,
    "currency": "USD"
   },
   "TSX:LUN": {
@@ -221,8 +221,8 @@
   },
   "TSX.V:ALTA": {
    "symbol": "ALTA.V",
-   "price": 0.235,
-   "marketCap": 69714642,
+   "price": 0.24,
+   "marketCap": 71197930,
    "currency": "CAD"
   },
   "TSX.V:LGC": {
@@ -281,8 +281,8 @@
   },
   "TSX.V:IFOS": {
    "symbol": "IFOS.V",
-   "price": 1.965,
-   "marketCap": 382743258,
+   "price": 1.97,
+   "marketCap": 383717159,
    "currency": "CAD"
   },
   "TSX.V:STS": {
@@ -293,14 +293,14 @@
   },
   "TSX.V:TRS": {
    "symbol": "TRS.V",
-   "price": 0.055,
-   "marketCap": 1387862,
+   "price": 0.06,
+   "marketCap": 1514031,
    "currency": "CAD"
   },
   "NASDAQ:SGML": {
    "symbol": "SGML",
    "price": 8.53,
-   "marketCap": 960207709,
+   "marketCap": 960207679,
    "currency": "USD"
   },
   "NASDAQ:ATLX": {
@@ -318,7 +318,7 @@
   "NASDAQ:AUGO": {
    "symbol": "AUGO",
    "price": 87.2,
-   "marketCap": 7310572709,
+   "marketCap": 7310572453,
    "currency": "USD"
   }
  }
